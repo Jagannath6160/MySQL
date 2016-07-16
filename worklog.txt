@@ -1,0 +1,5 @@
+Who,When,Min,What,Contrib1_5
+Rajah,2016-07-07,120,Attended first group meeting,5
+Rajah,2016-07-09,120,Attended phase 1 group meeting,5
+Rajah,2016-07-15,90,Got a GitHub account going,4
+Rajah,2016-07-15,60,Created DDL for the group,4
