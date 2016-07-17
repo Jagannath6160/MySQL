@@ -4,3 +4,7 @@ Rajah,2016-07-09,120,Attended phase 1 group meeting,5
 Rajah,2016-07-15,90,Got a GitHub account going,4
 Rajah,2016-07-15,60,Created DDL for the group,4
 Kranthi,2016-07-16,180,Sprint Meet,5
+Jay,2016-07-09,180,Sprint Meet,5
+Jay,2016-07-10,90,Created ER Diagram for report,5
+Jay,2016-07-11-7-12,120,Created and Wrote Report - "Rough Draft" for Phase 1 submission,5
+Jay,2016-07-16,180,attended Sprint Meet,5
