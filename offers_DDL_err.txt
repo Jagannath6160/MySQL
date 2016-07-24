@@ -1,0 +1,132 @@
+
+=====================================
+2016-07-24 04:51:26 55c INNODB MONITOR OUTPUT
+=====================================
+Per second averages calculated from the last 5 seconds
+-----------------
+BACKGROUND THREAD
+-----------------
+srv_master_thread loops: 81 srv_active, 0 srv_shutdown, 16537 srv_idle
+srv_master_thread log flush and writes: 16618
+----------
+SEMAPHORES
+----------
+OS WAIT ARRAY INFO: reservation count 231
+OS WAIT ARRAY INFO: signal count 226
+Mutex spin waits 1883, rounds 4957, OS waits 91
+RW-shared spins 134, rounds 3935, OS waits 129
+RW-excl spins 11, rounds 279, OS waits 6
+Spin rounds per wait: 2.63 mutex, 29.37 RW-shared, 25.36 RW-excl
+------------------------
+LATEST FOREIGN KEY ERROR
+------------------------
+2016-07-24 04:50:52 4d4 Error in foreign key constraint creation for table `universitydb`.`offers`.
+A foreign key constraint of name `universitydb`.`CourseID`
+already exists. (Note that internally InnoDB adds 'databasename'
+in front of the user-defined constraint name.)
+Note that InnoDB's FOREIGN KEY system tables store
+constraint names as case-insensitive, with the
+MySQL standard latin1_swedish_ci collation. If you
+create tables or databases whose names differ only in
+the character case, then collisions in constraint
+names can occur. Workaround: name your constraints
+explicitly with unique names.
+------------
+TRANSACTIONS
+------------
+Trx id counter 8877
+Purge done for trx's n:o < 8734 undo n:o < 0 state: running but idle
+History list length 114
+LIST OF TRANSACTIONS FOR EACH SESSION:
+---TRANSACTION 0, not started
+MySQL thread id 1117, OS thread handle 0x55c, query id 20431 localhost 127.0.0.1 root init
+SHOW ENGINE INNODB STATUS
+--------
+FILE I/O
+--------
+I/O thread 0 state: native aio handle (insert buffer thread)
+I/O thread 1 state: native aio handle (log thread)
+I/O thread 2 state: native aio handle (read thread)
+I/O thread 3 state: native aio handle (read thread)
+I/O thread 4 state: native aio handle (read thread)
+I/O thread 5 state: native aio handle (read thread)
+I/O thread 6 state: native aio handle (write thread)
+I/O thread 7 state: native aio handle (write thread)
+I/O thread 8 state: native aio handle (write thread)
+I/O thread 9 state: native aio handle (write thread)
+Pending normal aio reads: 0 [0, 0, 0, 0] , aio writes: 0 [0, 0, 0, 0] ,
+ ibuf aio reads: 0, log i/o's: 0, sync i/o's: 0
+Pending flushes (fsync) log: 0; buffer pool: 0
+823 OS file reads, 1681 OS file writes, 889 OS fsyncs
+0.00 reads/s, 0 avg bytes/read, 0.00 writes/s, 0.00 fsyncs/s
+-------------------------------------
+INSERT BUFFER AND ADAPTIVE HASH INDEX
+-------------------------------------
+Ibuf: size 1, free list len 0, seg size 2, 0 merges
+merged operations:
+ insert 0, delete mark 0, delete 0
+discarded operations:
+ insert 0, delete mark 0, delete 0
+0.00 hash searches/s, 0.00 non-hash searches/s
+---
+LOG
+---
+Log sequence number 2187072
+Log flushed up to   2187072
+Pages flushed up to 2187072
+Last checkpoint at  2187072
+Max checkpoint age    7782360
+Checkpoint age target 7539162
+Modified age          0
+Checkpoint age        0
+0 pending log writes, 0 pending chkp writes
+480 log i/o's done, 0.00 log i/o's/second
+----------------------
+BUFFER POOL AND MEMORY
+----------------------
+Total memory allocated 17072128; in additional pool allocated 0
+Total memory allocated by read views 944
+Internal hash tables (constant factor + variable factor)
+    Adaptive hash index 280916 	(276764 + 4152)
+    Page hash           9068 (buffer pool 0 only)
+    Dictionary cache    182352 	(69928 + 112424)
+    File system         416200 	(406136 + 10064)
+    Lock system         21500 	(21188 + 312)
+    Recovery system     0 	(0 + 0)
+Dictionary memory allocated 112424
+Buffer pool size        1023
+Buffer pool size, bytes 16760832
+Free buffers            767
+Database pages          256
+Old database pages      0
+Modified db pages       0
+Percent of dirty pages(LRU & free pages): 0.000
+Max dirty pages percent: 75.000
+Pending reads 0
+Pending writes: LRU 0, flush list 0, single page 0
+Pages made young 0, not young 0
+0.00 youngs/s, 0.00 non-youngs/s
+Pages read 635, created 220, written 961
+0.00 reads/s, 0.00 creates/s, 0.00 writes/s
+No buffer pool page gets since the last printout
+Pages read ahead 0.00/s, evicted without access 0.00/s, Random read ahead 0.00/s
+LRU len: 256, unzip_LRU len: 0
+I/O sum[9]:cur[0], unzip sum[0]:cur[0]
+--------------
+ROW OPERATIONS
+--------------
+0 queries inside InnoDB, 0 queries in queue
+0 read views open inside InnoDB
+0 RW transactions active inside InnoDB
+0 RO transactions active inside InnoDB
+0 out of 1000 descriptors used
+Main thread id 3300, state: sleeping
+Number of rows inserted 221, updated 10, deleted 85, read 1840
+0.00 inserts/s, 0.00 updates/s, 0.00 deletes/s, 0.00 reads/s
+Number of system rows inserted 0, updated 0, deleted 0, read 0
+0.00 inserts/s, 0.00 updates/s, 0.00 deletes/s, 0.00 reads/s
+----------------------------
+END OF INNODB MONITOR OUTPUT
+============================
+
+Open new phpMyAdmin window

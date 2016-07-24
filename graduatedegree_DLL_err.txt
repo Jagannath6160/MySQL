@@ -1,0 +1,138 @@
+nnoDB Documentation
+
+Percona-XtraDB, Supports transactions, row-level locking, foreign keys and encryption for tables
+
+[ Variables | Buffer Pool | InnoDB Status ]
+
+
+=====================================
+2016-07-24 05:04:00 22b4 INNODB MONITOR OUTPUT
+=====================================
+Per second averages calculated from the last 22 seconds
+-----------------
+BACKGROUND THREAD
+-----------------
+srv_master_thread loops: 82 srv_active, 0 srv_shutdown, 17290 srv_idle
+srv_master_thread log flush and writes: 17372
+----------
+SEMAPHORES
+----------
+OS WAIT ARRAY INFO: reservation count 233
+OS WAIT ARRAY INFO: signal count 228
+Mutex spin waits 1933, rounds 5013, OS waits 92
+RW-shared spins 135, rounds 3965, OS waits 130
+RW-excl spins 11, rounds 279, OS waits 6
+Spin rounds per wait: 2.59 mutex, 29.37 RW-shared, 25.36 RW-excl
+------------------------
+LATEST FOREIGN KEY ERROR
+------------------------
+2016-07-24 05:03:54 22b4 Error in foreign key constraint creation for table `universitydb`.`graduatedegree`.
+A foreign key constraint of name `universitydb`.`MajorID`
+already exists. (Note that internally InnoDB adds 'databasename'
+in front of the user-defined constraint name.)
+Note that InnoDB's FOREIGN KEY system tables store
+constraint names as case-insensitive, with the
+MySQL standard latin1_swedish_ci collation. If you
+create tables or databases whose names differ only in
+the character case, then collisions in constraint
+names can occur. Workaround: name your constraints
+explicitly with unique names.
+------------
+TRANSACTIONS
+------------
+Trx id counter 8924
+Purge done for trx's n:o < 8734 undo n:o < 0 state: running but idle
+History list length 114
+LIST OF TRANSACTIONS FOR EACH SESSION:
+---TRANSACTION 0, not started
+MySQL thread id 1129, OS thread handle 0x22b4, query id 20711 localhost 127.0.0.1 root init
+SHOW ENGINE INNODB STATUS
+--------
+FILE I/O
+--------
+I/O thread 0 state: native aio handle (insert buffer thread)
+I/O thread 1 state: native aio handle (log thread)
+I/O thread 2 state: native aio handle (read thread)
+I/O thread 3 state: native aio handle (read thread)
+I/O thread 4 state: native aio handle (read thread)
+I/O thread 5 state: native aio handle (read thread)
+I/O thread 6 state: native aio handle (write thread)
+I/O thread 7 state: native aio handle (write thread)
+I/O thread 8 state: native aio handle (write thread)
+I/O thread 9 state: native aio handle (write thread)
+Pending normal aio reads: 0 [0, 0, 0, 0] , aio writes: 0 [0, 0, 0, 0] ,
+ ibuf aio reads: 0, log i/o's: 0, sync i/o's: 0
+Pending flushes (fsync) log: 0; buffer pool: 0
+823 OS file reads, 1697 OS file writes, 897 OS fsyncs
+0.00 reads/s, 0 avg bytes/read, 0.73 writes/s, 0.36 fsyncs/s
+-------------------------------------
+INSERT BUFFER AND ADAPTIVE HASH INDEX
+-------------------------------------
+Ibuf: size 1, free list len 0, seg size 2, 0 merges
+merged operations:
+ insert 0, delete mark 0, delete 0
+discarded operations:
+ insert 0, delete mark 0, delete 0
+0.00 hash searches/s, 3.86 non-hash searches/s
+---
+LOG
+---
+Log sequence number 2190760
+Log flushed up to   2190760
+Pages flushed up to 2190760
+Last checkpoint at  2190760
+Max checkpoint age    7782360
+Checkpoint age target 7539162
+Modified age          0
+Checkpoint age        0
+0 pending log writes, 0 pending chkp writes
+483 log i/o's done, 0.14 log i/o's/second
+----------------------
+BUFFER POOL AND MEMORY
+----------------------
+Total memory allocated 17072128; in additional pool allocated 0
+Total memory allocated by read views 944
+Internal hash tables (constant factor + variable factor)
+    Adaptive hash index 297300 	(276764 + 20536)
+    Page hash           9068 (buffer pool 0 only)
+    Dictionary cache    182352 	(69928 + 112424)
+    File system         416200 	(406136 + 10064)
+    Lock system         21500 	(21188 + 312)
+    Recovery system     0 	(0 + 0)
+Dictionary memory allocated 112424
+Buffer pool size        1023
+Buffer pool size, bytes 16760832
+Free buffers            766
+Database pages          256
+Old database pages      0
+Modified db pages       0
+Percent of dirty pages(LRU & free pages): 0.000
+Max dirty pages percent: 75.000
+Pending reads 0
+Pending writes: LRU 0, flush list 0, single page 0
+Pages made young 0, not young 0
+0.00 youngs/s, 0.00 non-youngs/s
+Pages read 635, created 224, written 970
+0.00 reads/s, 0.18 creates/s, 0.41 writes/s
+Buffer pool hit rate 1000 / 1000, young-making rate 0 / 1000 not 0 / 1000
+Pages read ahead 0.00/s, evicted without access 0.00/s, Random read ahead 0.00/s
+LRU len: 256, unzip_LRU len: 0
+I/O sum[9]:cur[0], unzip sum[0]:cur[0]
+--------------
+ROW OPERATIONS
+--------------
+0 queries inside InnoDB, 0 queries in queue
+0 read views open inside InnoDB
+0 RW transactions active inside InnoDB
+0 RO transactions active inside InnoDB
+0 out of 1000 descriptors used
+Main thread id 3300, state: sleeping
+Number of rows inserted 221, updated 10, deleted 85, read 1976
+0.00 inserts/s, 0.00 updates/s, 0.00 deletes/s, 6.18 reads/s
+Number of system rows inserted 0, updated 0, deleted 0, read 0
+0.00 inserts/s, 0.00 updates/s, 0.00 deletes/s, 0.00 reads/s
+----------------------------
+END OF INNODB MONITOR OUTPUT
+============================
+
+Open new phpMyAdmin window
