@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `UNIVERSITYDB`.`Address` (
   `apartment` VARCHAR(20) NULL DEFAULT NULL,
   `region` VARCHAR(10) NULL DEFAULT NULL,
   PRIMARY KEY (`email`),
-  CONSTRAINT `email`
+  CONSTRAINT `emailAddress`
     FOREIGN KEY (`email`)
     REFERENCES `UNIVERSITYDB`.`AspiringStudent` (`email`)
     ON DELETE CASCADE);
