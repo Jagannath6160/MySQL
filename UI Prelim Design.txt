@@ -1,0 +1,64 @@
+FIRST : CONNECTION PORTAL
+
+
+Login ( Email / password)
+
+1st page:
+
+   Build your profile!!                 Explore UNCC
+
+
+- Basic Informaiton
+		(Form)
+		First Name, Last Name 
+		Email address
+		Address
+-Contacts
+	Phone 
+	Email (mom and dad)
+
+-Academic Interests
+ cURRENT GPA
+ Major Interest (drop down menu) - get from major table
+ Start Term applying for (drop down spring/year, fall/year)
+ what degree are you seeking (BS, MS, phd)
+			IF BS ---> SAT
+			IF MS OR PHD --> GRE
+
+Extra Cirricular Activities  ( get all possible extra cirr, activites from the table, let student pick)
+	- drop down menu,  - basketball, baseball, music, blah blah
+        - academic letter (true or false)
+
+     drop
+    activity		academic letter		years experience
+   
+
+-------------------------------------------------
+
+STAFF
+
+Basic Information:
+
+Name, id, email, passwword
+
+SEARCH STUDENTS
+
+
+- by gpa
+- by extra cirricular interests
+- by degree seeking 
+- by major seeking
+- by region 
+
+searchign these students produces a list ofstudents that fit the criteria. 
+
+- this is our mailing list? 
+
+- click on a student, display their information, click reach out to this student  and dont reach out to student. 
+
+Mention the point of 20% increase in student acceptance.  
+
+
+
+
+ 
