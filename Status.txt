@@ -1,0 +1,49 @@
+ER (100%)
+  DDL (100%)
+    Test Data (20%)
+      AspiringStudent, Staff, Contacts
+      Most needed: Major (Amir). Seeking, Address
+      Most needed (all Sukriti): Major, FinancialAssistance, Offered.
+      Next needed: (??)
+
+      DML(0%)
+        UI(10%)
+
+Other tables
+Resources
+ClicksOn
+ExtraCurricularActivities
+Enjoys
+Address
+Courses
+FinancialAssistance
+SemestersOffered
+Offers
+Offered
+UndergraduateDegree
+GraduateDegree
+
+INSERT INTO AspiringStudent ('idAspiringStudent','email','Name','Password') VALUES (1,' AmirAzmoon@uncc.edu',' Amir Azmoon','645224');
+INSERT INTO AspiringStudent ('idAspiringStudent','email','Name','Password') VALUES (2,' JayShah@uncc.edu', Jay Shah,'347017');
+
+Note that the idAspiringStudent are 1 and 2.
+Note that you'll have to relax constraints to add your own numbers to the database. It is auto-generated now. 
+
+Here's how to enter into Major. Here are two, different ways. Either is acceptable. 
+
+INSERT INTO Major('MajorID', 'MajorName', 'EducationalPrereq', 'MinGPA', 'InstateTuition', 'OutStateTuition', 'NumCourses')
+VALUES               1001,    'Chemistry', 'Science background', 3.75,     24000.00,         36000.00,          15);
+
+INSERT INTO Major VALUES (1002, 'Business', 'None',              3.25,   , 22000.00,         39000.00,          16);
+INSERT INTO Major VALUES (1003, 'Comp Sci', 'Engineering background', 3.95,   , 26000.00,         45000.00,      14)
+
+
+Here is how we can insert into FinancialAssistance. 
+INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Belk scholarship', 7500.00, 3.90);
+INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Woodward chemical scholarship', 2500.00, 3.75);
+INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Turing scholarship', 9500.00, 3.95);
+
+Offered is all foreign keys. 
+INSERT INTO Offered ('Name', 'MajorID') VALUES ('Belk scholarship', 1002);
+INSERT INTO Offered ('Name', 'MajorID') VALUES ('Woodward checmial scholarship', 1001);
+INSERT INTO Offered ('Name', 'MajorID') VALUES ('Turing scholarship', 1003);
