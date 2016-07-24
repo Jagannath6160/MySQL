@@ -9,15 +9,32 @@ Here's how to enter into Major. Here are two, different ways. Either is acceptab
 INSERT INTO Major('MajorID', 'MajorName', 'EducationalPrereq', 'MinGPA', 'InstateTuition', 'OutStateTuition', 'NumCourses')
 VALUES               1001,    'Chemistry', 'Science background', 3.75,     24000.00,         36000.00,          15)
 
-INSERT INTO Major VALUES (1002, 'Business', 'None',              3.25,   , 22000.00,         39000.00,          16)
-INSERT INTO Major VALUES (1003, 'Comp Sci', 'Engineering background', 3.95,   , 26000.00,         45000.00,      14)
+INSERT INTO Major('MajorID', 'MajorName', 'EducationalPrereq', 'MinGPA', 'InstateTuition', 'OutStateTuition', 'NumCourses') VALUES (1002, 'Business', 'None',              3.25,   , 22000.00,         39000.00,          16)
+INSERT INTO Major('MajorID', 'MajorName', 'EducationalPrereq', 'MinGPA', 'InstateTuition', 'OutStateTuition', 'NumCourses') VALUES (1003, 'Comp Sci', 'Engineering background', 3.95   , 26000.00,         45000.00,      14)
+INSERT INTO Major ('MajorID', 'MajorName', 'EducationalPrereq', 'MinGPA', 'InstateTuition', 'OutStateTuition', 'NumCourses')VALUES (1004, 'Physics' , 'Technical Background' , 3.85, 26500.00, 46500.00, 13)
+INSERT INTO Major('MajorID', 'MajorName', 'EducationalPrereq', 'MinGPA', 'InstateTuition', 'OutStateTuition', 'NumCourses') VALUES (1005, 'Economics' , 'Mathematics' , 3.70, 22000.00, 25000.00, 12)
+INSERT INTO Major('MajorID', 'MajorName', 'EducationalPrereq', 'MinGPA', 'InstateTuition', 'OutStateTuition', 'NumCourses') VALUES (1006, 'Mathematics' , 'Calculus' , 3.85, 22500.00, 24000.00, 14)
+INSERT INTO Major('MajorID', 'MajorName', 'EducationalPrereq', 'MinGPA', 'InstateTuition', 'OutStateTuition', 'NumCourses') VALUES (1007, 'Arab studies' , 'History' , 3.50, 21000.00, 23000.00, 12)
+INSERT INTO Major('MajorID', 'MajorName', 'EducationalPrereq', 'MinGPA', 'InstateTuition', 'OutStateTuition', 'NumCourses') VALUES (1008, 'Literature' , 'English' , 3.55, 22000.00, 24500.00, 13)
+INSERT INTO Major('MajorID', 'MajorName', 'EducationalPrereq', 'MinGPA', 'InstateTuition', 'OutStateTuition', 'NumCourses') VALUES (1009, 'History' , 'American History', 3.45, 21000.00, 23750.00, 14)
+INSERT INTO Major('MajorID', 'MajorName', 'EducationalPrereq', 'MinGPA', 'InstateTuition', 'OutStateTuition', 'NumCourses') VALUES (1010, 'Geography' , 'Pangaea', 3.44, 22400.00, 24400.00, 15)
+
+
+
+
 
 
 Here is how we can insert into FinancialAssistance. 
 INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Belk scholarship', 7500.00, 3.90)
 INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Woodward checmial scholarship', 2500.00, 3.75)
 INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Turing scholarship', 9500.00, 3.95)
-
+INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Newton scholarship' , 9000.00, 3.95)
+INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Adam Smith scholarship' , 8000.00, 3.90)
+INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Ramanujan scholarship' , 7500.00, 3.95)
+INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Noor scholarship' , 7800.00, 3.90)
+INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Robert Frost scholarship' , 7500.00, 3.85)
+INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Herodotus scholarship' , 8000.00, 3.90)
+INSERT INTO FinancialAssistance ('Name', 'Amount', 'MinGPA') VALUES ('Ash amin scholarship' , 8400.00, 3.85)
 Offered is all foreign keys. 
 INSERT INTO Offered ('Name', 'MajorID') VALUES ('Belk scholarship', 1002);
 INSERT INTO Offered ('Name', 'MajorID') VALUES ('Woodward checmial scholarship', 1001);
