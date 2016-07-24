@@ -1,0 +1,385 @@
+--  -------------------
+-- Depending on exiting data, user may need to run truncate more than one batch, to do so truncate first batch of tables and commit, then run the next batch.
+
+TRUNCATE offers;
+TRUNCATE offered;
+TRUNCATE enjoys;
+TRUNCATE semestersoffered;
+TRUNCATE financialassistance;
+TRUNCATE staff;
+TRUNCATE extracurricularactivities;
+TRUNCATE clickson;
+TRUNCATE seeking;
+TRUNCATE courses;
+TRUNCATE undergraduatedegree;
+TRUNCATE graduatedegree;
+TRUNCATE contacts;
+
+
+--  -----------------
+-- Delete command may create foreign key violation same as truncate
+
+
+/* `courses` */
+DELETE FROM `courses`;
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('1','Physics I');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('2','Physics II');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('3','Calculus I');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('4','Calculus II');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('5','Calculus III');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('6','Introduction to C++');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('7','Introduction to Java');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('8','Algorithms Design');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('9','Algorithms Design');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('10','Database Systems');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('11','Statics');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('12','Thermodynamics I');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('13','Thermodynamics II');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('14','Control Systems I');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('15','Linear Algebra');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('16','Bridge Desgin');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('17','Structural Steel I');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('18','Structural Steel II');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('19','Statics');
+INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('20','Capital Estimating');
+
+/*  semestersoffered */
+DELETE FROM `semestersoffered`;
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('1','Summer II 2016');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('2','Summer I 2016');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('3','Spring 2016');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('4','Fall 2015');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('5','Summer II 2015');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('6','Summer I 2015');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('7','Spring 2015');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('8','Fall 2014');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('9','Summer II 2016');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('10','Summer I 2016');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('11','Spring 2016');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('12','Fall 2015');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('13','Summer II 2015');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('14','Summer I 2015');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('15','Spring 2015');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('16','Fall 2014');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('17','Summer II 2016');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('18','Summer I 2016');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('19','Spring 2016');
+
+
+/* major */
+DELETE FROM `major` ;
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M1','B.S in Mathematics','High School',3,4000,7000,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M2','B.S in Physics  ','High School',3,4000,7000,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M3','B.S in Computer Science','High School',3,4000,7000,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M4','B.S in Mechanical Engineering','High School',3,3800,6800,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M5','B.S in Civil Engineering','High School',3,3800,6800,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M6','B.S in Computer Engineering','High School',3,5500,8500,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M7','B.S in Industrial Engineering','High School',3,5500,8500,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M8','B.S in Chemistry','High School',3,4400,7400,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M9','M.S in Mathematics','Bachelor',3,4400,7400,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M10','M.S in Physics  ','Bachelor',3.2,5000,8000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M11','M.S in Computer Science','Bachelor',3.2,5000,8000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M12','M.S in Mechanical Engineering','Bachelor',3.2,5000,8000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M13','M.S in Civil Engineering','Bachelor',3.2,6000,9000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M14','M.S in Computer Engineering','Bachelor',3.2,6000,9000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M15','M.S in Industrial Engineering','Bachelor',3.2,6000,9000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M16','M.S in Chemistry','Bachelor',3.2,6000,9000,10);
+
+
+/* undergraduatedegree */
+DELETE FROM `undergraduatedegree`;
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M1','Mathematics',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M2','Physics ',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M3','Computer Science',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M4','Mechanical Engineering',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M5','Civil Engineering',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M6','Computer Engineering',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M7','Industrial Engineering',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M8','Chemistry',270);
+
+
+/* financialassistance */
+DELETE FROM `financialassistance`
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Belk Scholarships',2500,2.5);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Turing Scholarships',3500,2.9);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Federal Grants',4500,3);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Institutional Grants',1200,3);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Levine Scholars Program',9000,3.2);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Agency Start Scholarship',7000,3);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('A.K. Sutton Scholarship',4000,3);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Bonnie Cone Scholarship',3800,3);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Alumni Scholarships for Merit',12000,3.3);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Grant Thornton Scholarship',1000,4);
+
+
+/* extracurricularactivities */
+DELETE FROM `extracurricularactivities`;
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Soccer',1);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Basketball',2);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Baseball',3);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Racquetball  ',4);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Football',5);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Swimming',6);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Softball',7);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Chess Club',8);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Computer Science Club',9);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('The Engineering Club',10);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Mathematics Club',11);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Chemistry Club',12);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Greek Life',13);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Physics Club',14);
+INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Student Activities',15);
+
+
+/* aspiringstudent */
+DELETE FROM `aspiringstudent`;
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('1','AmirAzmoon@uncc.edu','Azmoon','761757','Amir');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('2','JayShah@uncc.edu','Shah','751158','Jay');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('3','EbrahimMughal@uncc.edu','Mughal','136797','Ebrahim');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('4','KrantiChinnaokotla@uncc.edu','Chinnaokotla','664015','Kranti');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('5','Lakshmi VenkataSowmya Andal@uncc.edu','Sowmya Andal','555566','Lakshmi Venkata');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('6','JaiDave@uncc.edu','Dave','204040','Jai');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('7','RajahChacko@uncc.edu','Chacko','46999','Rajah');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('8','SukritiRoy@uncc.edu','Roy','247285','Sukriti');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('9','SujitNanda@uncc.edu','Nanda','678136','Sujit');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('10','DineashPanchananam@uncc.edu','Panchananam','762810','Dineash');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('11','KatherineRees@uncc.edu','Rees','702632','Katherine');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('12','ChloeHunter@uncc.edu','Hunter','91433','Chloe');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('13','GrayCarolyn@uncc.edu','Carolyn','280626','Gray');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('14','PetersAbigail@uncc.edu','Abigail','230625','Peters');
+INSERT INTO `aspiringstudent`(`idAspiringStudent`, `email`, `LastName`, `Password`, `FirstName`) VALUES ('15','MackenzieLeonard@uncc.edu','Leonard','422458','Mackenzie');
+
+
+/* enjoys */
+DELETE FROM `enjoys`;
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,1,'AmirAzmoon@uncc.edu',1);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,2,'JayShah@uncc.edu',2);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,3,'EbrahimMughal@uncc.edu',3);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,1,'KrantiChinnaokotla@uncc.edu',4);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,2,'Lakshmi VenkataSowmya Andal@uncc.edu',5);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,3,'JaiDave@uncc.edu',6);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (2,4,'RajahChacko@uncc.edu',7);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (2,1,'SukritiRoy@uncc.edu',8);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (3,1,'SujitNanda@uncc.edu',9);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (4,1,'DineashPanchananam@uncc.edu',10);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (5,2,'KatherineRees@uncc.edu',11);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (6,3,'ChloeHunter@uncc.edu',12);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (3,4,'GrayCarolyn@uncc.edu',13);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,1,'PetersAbigail@uncc.edu',14);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,2,'MackenzieLeonard@uncc.edu',15);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,3,'KatherineRees@uncc.edu',6);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,1,'ChloeHunter@uncc.edu',7);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,2,'GrayCarolyn@uncc.edu',8);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,3,'PetersAbigail@uncc.edu',9);
+INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,4,'MackenzieLeonard@uncc.edu',10);
+
+
+DELETE FROM `contacts`;
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('AmirAzmoon@uncc.edu','426-168-2339',1);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('JayShah@uncc.edu','519-558-9869',0);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('EbrahimMughal@uncc.edu','520-932-7244',1);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('KrantiChinnaokotla@uncc.edu','449-307-5930',1);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('Lakshmi VenkataSowmya Andal@uncc.edu','721-542-2665',0);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('JaiDave@uncc.edu','789-195-6905',1);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('RajahChacko@uncc.edu','465-614-4019',1);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('SukritiRoy@uncc.edu','674-852-3843',0);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('SujitNanda@uncc.edu','426-900-9815',0);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('DineashPanchananam@uncc.edu','232-287-4125',1);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('KatherineRees@uncc.edu','558-538-1635',1);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('ChloeHunter@uncc.edu','557-847-4680',0);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('GrayCarolyn@uncc.edu','342-662-8800',0);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('PetersAbigail@uncc.edu','949-153-6957',0);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('MackenzieLeonard@uncc.edu','233-724-9876',1);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('GrayCarolyn@uncc.edu','342-662-8850',0);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('PetersAbigail@uncc.edu','949-153-6987',0);
+INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('MackenzieLeonard@uncc.edu','233-624-9876',1);
+
+
+
+
+
+DELETE FROM `staff`;
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (1,'SueRussell@uncc.edu', 'Sue Russell',424784);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (2,'RobertUnderwood@uncc.edu', 'Robert Underwood',265993);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (3,'UnmanyouJones@uncc.edu', 'Unmanyou Jones',897677);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (4,'LaurenClarkson@uncc.edu', 'Lauren Clarkson',238310);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (5,'GabrielleWhite@uncc.edu', 'Gabrielle White',626105);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (6,'SmithFinely@uncc.edu', 'Smith Finely',118846);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (7,'LivelyBlake@uncc.edu', 'Lively Blake',756272);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (8,'AnneLee@uncc.edu', 'Anne Lee',941893);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (9,'SeanMathis@uncc.edu', 'Sean Mathis',629994);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (10,'StephenMorgan@uncc.edu', 'Stephen Morgan',873444);
+
+/* clickson */
+DELETE FROM `clickson`;
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (1,'AmirAzmoon@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (2,'JayShah@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (3,'EbrahimMughal@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (4,'KrantiChinnaokotla@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (5,'Lakshmi VenkataSowmya Andal@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (6,'JaiDave@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (7,'RajahChacko@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (8,'SukritiRoy@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (9,'SujitNanda@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (10,'DineashPanchananam@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (1,'KatherineRees@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (2,'ChloeHunter@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (3,'GrayCarolyn@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (4,'PetersAbigail@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (5,'MackenzieLeonard@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (6,'KatherineRees@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (7,'ChloeHunter@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (8,'GrayCarolyn@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (9,'PetersAbigail@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (10,'MackenzieLeonard@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (1,'JayShah@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (2,'EbrahimMughal@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (3,'KrantiChinnaokotla@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (4,'Lakshmi VenkataSowmya Andal@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (5,'JaiDave@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (6,'RajahChacko@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (7,'SukritiRoy@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (8,'SujitNanda@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (9,'KatherineRees@uncc.edu');
+INSERT INTO `clickson`(`idResource`, `email`) VALUES (10,'ChloeHunter@uncc.edu');
+
+/* offers */
+DELETE FROM `offers`;
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('1','M1');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('2','M1');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('3','M1');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('4','M1');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('5','M1');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('6','M1');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('7','M1');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('8','M2');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('9','M2');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('10','M2');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('11','M2');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('12','M2');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('13','M2');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('14','M3');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('15','M3');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('16','M3');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('17','M3');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('18','M4');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('19','M4');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('20','M4');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('1','M4');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('2','M4');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('3','M4');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('4','M4');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('5','M5');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('6','M5');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('7','M5');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('8','M5');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('9','M5');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('10','M5');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('11','M6');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('12','M6');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('13','M6');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('14','M6');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('15','M6');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('16','M6');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('17','M6');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('18','M6');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('19','M6');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('20','M6');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('1','M7');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('2','M7');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('3','M7');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('4','M7');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('5','M7');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('6','M7');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('7','M7');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('8','M7');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('9','M7');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('10','M7');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('11','M7');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('12','M8');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('13','M8');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('14','M8');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('15','M8');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('16','M9');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('17','M9');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('18','M9');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('19','M9');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('20','M9');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('1','M9');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('2','M10');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('3','M10');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('4','M10');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('5','M10');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('6','M11');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('7','M11');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('8','M11');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('9','M11');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('10','M12');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('11','M12');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('12','M12');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('13','M12');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('14','M13');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('15','M13');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('16','M13');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('17','M14');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('18','M14');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('19','M15');
+INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('20','M16');
+
+/* offered */
+DELETE FROM `offered`;
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Belk Scholarships','M1');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Turing Scholarships','M2');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Federal Grants','M3');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Institutional Grants','M4');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Levine Scholars Program','M5');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Agency Start Scholarship','M6');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('A.K. Sutton Scholarship','M7');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Bonnie Cone Scholarship','M8');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Alumni Scholarships for Merit','M9');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Grant Thornton Scholarship','M10');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Belk Scholarships','M11');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Turing Scholarships','M12');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Federal Grants','M13');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Institutional Grants','M14');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Levine Scholars Program','M15');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Agency Start Scholarship','M16');
+
+
+/*  seeking */
+DELETE FROM `seeking`;
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('BS','2016-06-29','AmirAzmoon@uncc.edu','M1');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('BS','2016-05-18','JayShah@uncc.edu','M2');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('BS','2016-01-07','EbrahimMughal@uncc.edu','M3');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('BS','2016-08-15','KrantiChinnaokotla@uncc.edu','M4');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('BS','2015-06-29','Lakshmi VenkataSowmya Andal@uncc.edu','M5');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('PhD','2015-05-18','JaiDave@uncc.edu','M6');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('PhD','2015-01-07','RajahChacko@uncc.edu','M7');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('PhD','2014-08-15','SukritiRoy@uncc.edu','M8');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('PhD','2016-06-29','SujitNanda@uncc.edu','M9');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('PhD','2016-05-18','DineashPanchananam@uncc.edu','M10');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('PhD','2016-01-07','KatherineRees@uncc.edu','M11');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('MS','2015-08-15','ChloeHunter@uncc.edu','M12');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('MS','2015-06-29','GrayCarolyn@uncc.edu','M13');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('MS','2015-05-18','PetersAbigail@uncc.edu','M14');
+INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('MS','2015-01-07','MackenzieLeonard@uncc.edu','M15');
+
+/* graduatedegree */ 
+DELETE FROM `graduatedegree`;
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M1','Computer Science',250);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M2','Mathematics',250);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M3','Physics',250);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M4','Chemistry',260);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M5','Mechanical Engineering',260);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M6','Civil Engineering',260);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M7','Electrical and Computer Engineering',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M8','Industrial Engineering',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M9','Computer Science',290);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M10','Mathematics',290);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M11','Physics',290);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M12','Chemistry',260);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M13','Mechanical Engineering',290);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M14','Civil Engineering',300);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M15','Electrical and Computer Engineering',300);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M16','Industrial Engineering',300);
+
