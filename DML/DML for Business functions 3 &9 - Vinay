@@ -1,0 +1,53 @@
+-- Allow staff to search based on  major 
+
+SELECT idAspiringStudent, email,Name,Degree, MajorID,MajorName,EducationalPrereq, MinGPA,InstateTution, OutStateTution, NumCourses
+
+FROM
+
+	AspiringStudent, Seeking, Major
+
+WHERE
+
+	email.AspiringStudent = email.Seeking AND 
+	MajorID.Seeking = MajorID.Major AND
+	Major = ‘Input Variable’
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-- Allow staff to search based on  Degree seeking 
+SELECT idAspiringStudent, email,Name,Degree, MajorID,MajorName,EducationalPrereq, MinGPA,InstateTution, OutStateTution, NumCourses
+
+FROM
+
+	AspiringStudent, Seeking, Major
+
+WHERE
+
+	email.AspiringStudent = email.Seeking AND 
+	MajorID.Seeking = MajorID.Major AND
+	Degree = ‘Input Variable’
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-- Allow staff to search based on  Location
+
+SELECT idAspiringStudent, email,Name, city, state,zip code,region
+
+FROM
+
+	AspiringStudent, Address
+
+WHERE
+
+	email.AspiringStudent = email.Address AND 
+	zipcode = ‘Input Variable’
+	
+-- Allow staff to search based on  Geography 
+SELECT idAspiringStudent, email,Name, city, state,zip code,region
+
+FROM
+
+	AspiringStudent, Address
+
+WHERE
+
+	email.AspiringStudent = email.Address AND 
+	region = ‘Input Variable’
