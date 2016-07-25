@@ -12,12 +12,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- This is the Schema for the ITCS 6160 University Project.
 -- 
 
--- -----------------------------------------------------
--- Schema UNIVERSITYDB
---
--- This is the Schema for the ITCS 6160 University Project.
--- 
--- -----------------------------------------------------
+
 CREATE SCHEMA IF NOT EXISTS `UNIVERSITYDB` DEFAULT CHARACTER SET utf8 ;
 USE `UNIVERSITYDB` ;
 
