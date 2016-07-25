@@ -88,14 +88,14 @@ INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `Inst
 
 /* undergraduatedegree */
 DELETE FROM `undergraduatedegree`;
-INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M1','Mathematics',270);
-INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M2','Physics ',270);
-INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M3','Computer Science',270);
-INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M4','Mechanical Engineering',270);
-INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M5','Civil Engineering',270);
-INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M6','Computer Engineering',270);
-INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M7','Industrial Engineering',270);
-INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `GREScore`) VALUES ('M8','Chemistry',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M1','Mathematics',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M2','Physics ',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M3','Computer Science',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M4','Mechanical Engineering',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M5','Civil Engineering',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M6','Computer Engineering',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M7','Industrial Engineering',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M8','Chemistry',270);
 
 
 /* financialassistance */
