@@ -186,7 +186,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `UNIVERSITYDB`.`Major` (
   `MajorID` VARCHAR(15) NOT NULL,
-  `MajorName` VARCHAR(25) NOT NULL,
+  `MajorName` VARCHAR(40) NOT NULL,
   `EducationalPrereq` VARCHAR(30) NULL,
   `MinGPA` FLOAT(3,2) NOT NULL,
   `InstateTuition` FLOAT(10,2) NOT NULL,
