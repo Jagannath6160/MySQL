@@ -293,6 +293,17 @@ CREATE TABLE IF NOT EXISTS `UNIVERSITYDB`.`GraduateDegree` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
+-- Create a static reference table containing two-letter state abbreviation (PK), state, and census region. 
+-- -----------------------------------------------------
+-- Table `UNIVERSITYDB`.`StateRegion`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `UNIVERSITYDB`.`StateRegion` ( 
+`StateAbbr` CHAR(2) NOT NULL , 
+`State` VARCHAR(15) NOT NULL , 
+`Region` VARCHAR(20) NOT NULL , 
+PRIMARY KEY (`StateAbbr`(2))) 
+ENGINE = InnoDB;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
