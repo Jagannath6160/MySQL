@@ -1,7 +1,7 @@
-CREATE VIEW `Search by MAJOR` AS
+CREATE VIEW `Search by MajorName` AS
 -- Allow staff to search based on  major 
 
-SELECT DISTINCT (A.email)
+SELECT A.email, A.FirstName, A.LastName, MajorName
 
 FROM
 
@@ -9,15 +9,19 @@ FROM
 
 WHERE
 	 
-    S.MajorID='M4' AND
-    A.email=S.email;
+    M.MajorName='B.S in Computer Engineering' AND
+    S.MajorID=M.MajorID AND
+    A.email=S.email
+    Order By A.FirstName;
 
-==================>>>>>>>>>>>>>>>
 
-CREATE VIEW `Search by DEGREE SEEKING` AS
--- Allow staff to search based on  DEGREE 
+============
 
-SELECT DISTINCT (A.email)
+
+CREATE VIEW `Search by DEGREESEEKING1` AS
+-- Allow staff to search based on  Degree seeked
+
+SELECT  A.email, A.FirstName, A.LastName, MajorName
 
 FROM
 
@@ -26,35 +30,46 @@ FROM
 WHERE
 	 
     S.Degree='BS' AND
-    A.email=S.email;
+    S.email=A.email
+    GROUP BY A.email;
 
-==================>>>>>>>>>>>>>>>>>
+=============
 
 
-CREATE VIEW `Search by city` AS
--- Create report by Location
-SELECT DISTINCT (A.email)
+CREATE or REPLACE VIEW `Search by city1` AS
+
+-- Allow staff to search by Location / City
+
+
+SELECT  A.email, A.FirstName, A.LastName, MajorName, City
 
 FROM
 
-	AspiringStudent A, Address D
+	AspiringStudent A, Address D, Major M, Seeking S
 
 WHERE
 	 
     A.email=D.email AND
+    A.email=S.email AND
+    S.MajorID = M.MajorID AND
     D.city = 'Charlotte';
 
-==============>>>>>>>>>>>>>>>>
+================
 
-CREATE VIEW `Search by REGION` AS
--- Create report by Geography/region
-SELECT DISTINCT (A.email)
+CREATE or REPLACE VIEW `Search by Geography / Region` AS
+
+-- Allow staff to search by Geography or Region
+
+
+SELECT  A.email, A.FirstName, A.LastName, MajorName, Region
 
 FROM
 
-	AspiringStudent A, Address D
+	AspiringStudent A, Address D, Major M, Seeking S
 
 WHERE
 	 
     A.email=D.email AND
-    D.region = 'south';
+    A.email=S.email AND
+    S.MajorID = M.MajorID AND
+    D.Region = 'South';
