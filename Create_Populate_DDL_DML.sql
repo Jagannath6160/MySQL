@@ -330,25 +330,25 @@ INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('20','Capital Estimating
 
 /*  semestersoffered */
 
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('1','Summer II 2016');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('2','Summer I 2016');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('3','Spring 2016');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('4','Fall 2015');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('5','Summer II 2015');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('6','Summer I 2015');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('7','Spring 2015');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('8','Fall 2014');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('9','Summer II 2016');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('10','Summer I 2016');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('11','Spring 2016');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('12','Fall 2015');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('13','Summer II 2015');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('14','Summer I 2015');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('15','Spring 2015');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('16','Fall 2014');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('17','Summer II 2016');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('18','Summer I 2016');
-INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('19','Spring 2016');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('1','Summer II');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('2','Summer I');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('3','Spring');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('4','Fall');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('5','Summer II');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('6','Summer I');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('7','Spring');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('8','Fall');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('9','Summer II');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('10','Summer I');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('11','Spring');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('12','Fall');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('13','Summer II');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('14','Summer I');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('15','Spring');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('16','Fall');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('17','Summer II');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('18','Summer');
+INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('19','Spring');
 
 
 /* major */
