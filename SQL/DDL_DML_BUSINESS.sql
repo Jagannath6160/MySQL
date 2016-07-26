@@ -905,9 +905,8 @@ SELECT a.email, a.testscore, a.GPA FROM aspiringstudent a WHERE a.email="rvanga@
 
 /*  Allow staff to view all the student’s G.P.A and S.A.T Score in decreasing order of test score.  */
 
-CREATE VIEW `Descending order of students by testscore` AS
-SELECT a.email, a.testscore, a.GPA FROM aspiringstudent a WHERE a.email="rvanga@gmail.com";
-
+CREATE VIEW `Display test scores in descending` AS
+SELECT a.email, a.testscore, a.GPA FROM aspiringstudent a ORDER BY a.testscore DESC;
 
 
 /* 6. Allow a student to locate the Resources and access any of the resource. */
