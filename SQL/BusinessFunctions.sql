@@ -1,3 +1,4 @@
+
 /*--------------- BUSINESS FUNCTIONS---------------------*/
 
 
@@ -71,7 +72,7 @@ SELECT A.email, A.FirstName, A.LastName, MajorName
 FROM
 	AspiringStudent A, Major M, Seeking S
 WHERE
-    M.MajorName='B.S in Computer Engineering' AND
+    M.MajorName='Computer Engineering' AND
     S.MajorID=M.MajorID AND
     A.email=S.email
     Order By A.FirstName;
@@ -108,17 +109,16 @@ WHERE
 /* 5. Allow staff to view student(s) G.P.A and GRE/SAT score. */
 
 
-/* Allow staff to view a student’s G.P.A and S.A.T Score  */
+/* Allow staff to view a studentâ€™s G.P.A and S.A.T Score  */
 
 CREATE VIEW `View Student's GPA and test scores` AS
 SELECT a.email, a.testscore, a.GPA FROM aspiringstudent a WHERE a.email="rvanga@gmail.com";
 
 
-/*  Allow staff to view all the student’s G.P.A and S.A.T Score in decreasing order of test score.  */
+/*  Allow staff to view all the studentâ€™s G.P.A and S.A.T Score in decreasing order of test score.  */
 
-CREATE VIEW `Descending order of students by testscore` AS
-SELECT a.email, a.testscore, a.GPA FROM aspiringstudent a WHERE a.email="rvanga@gmail.com";
-
+CREATE VIEW `Display test scores in descending` AS
+SELECT a.email, a.testscore, a.GPA FROM aspiringstudent a ORDER BY a.testscore DESC;
 
 
 /* 6. Allow a student to locate the Resources and access any of the resource. */
@@ -130,19 +130,15 @@ CREATE VIEW `Resources available to Student` AS
 Select StudentLifeDoc From Resources;
 
 
-/* 7. Allow a student to search for resources based on the specialization */
-
-
 /* Allow the student to view resources based on specialization */
 
 CREATE VIEW `View Resources based on specialization` AS
-Select Specialization
+Select StudentLifeDoc, StudentLifeDocContents
 From Resources
 where Specialization like 'sports';
 
 
-/* 8. Allow staff to view reports based on specific criteria such as G.P.A and GRE/S.A.T score. */
-
+/* 7. Allow staff to view reports based on specific criteria such as G.P.A and GRE/S.A.T score. */
 
 /* Search based on G.P.A and SAT */
 
@@ -156,7 +152,7 @@ Select * from major m, GraduateDegree g where g.MajorID =m.MajorID and m.MinGPA=
 
 
 
-/* -- 9. Allow staff to search based on  Geography and Location*/
+/* -- 8. Allow staff to search based on  Geography and Location*/
 
 
 /*  Allow staff to search by Location / City */
@@ -186,7 +182,7 @@ WHERE
 
 
 
-/* -- 10. Allow staff to View reports to recruit and reach out to students based on their extracurricular  activities and Academics */
+/* -- 9. Allow staff to View reports to recruit and reach out to students based on their extracurricular  activities and Academics */
 
 
 /* Allow staff to View reports to recruit and reach out to students based on the extracurricular activity name */
@@ -204,7 +200,7 @@ from      aspiringstudent
 and        TestScore > 300;
 
 
-/* -- 11. Allow staff to view reports based on resources accessed by the students. */
+/* -- 10. Allow staff to view reports based on resources accessed by the students. */
 
 
 /* Allow staff to view the resources accessed by a student */
