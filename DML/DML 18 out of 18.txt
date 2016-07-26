@@ -156,7 +156,7 @@ INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALU
 
 
 /* financialassistance */
-DELETE FROM `financialassistance`
+DELETE FROM `financialassistance`;
 INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Belk Scholarships',2500,2.5);
 INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Turing Scholarships',3500,2.9);
 INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Federal Grants',4500,3);
@@ -266,6 +266,27 @@ INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES 
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (8,'AnneLee@uncc.edu', 'Anne Lee',941893);
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (9,'SeanMathis@uncc.edu', 'Sean Mathis',629994);
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (10,'StephenMorgan@uncc.edu', 'Stephen Morgan',873444);
+
+
+/* resources */ 
+DELETE FROM `resources`;
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('1', 'SportsUNCC.PDF', null, null, '0','Sports', 'Fall');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('2', 'CultureUNCC.PDF', null, null, '2','Culture', 'Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('3', 'Housing.PDF', null, null, '1', 'Housing','Summer1');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('4', 'TravelUNCC.PDF', null, null, '4', 'Travel','Summer2');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('5', 'CampusLifeUNCC.PDF', null, null, '2', 'CampusLife','Summer1');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('6', 'LibraryUNCC.PDF', null, null, '3', 'Library', 'Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('7', 'AcademicsUNCC.PDF', null, null, '1', 'Academics','Summer2');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('8', 'SecurityUNCC.PDF', null, null, '5', 'Security', 'Fall');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('9', 'AdmissionsUNCC.PDF', null, null, '2', 'Admissions', 'Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('10', 'AboutUNCC.PDF', null, null, '7', 'AboutUNCC','Summer1');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('11', 'VisitCampusUNCC.PDF', null, null, '6', 'VisitCampus','Fall');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('12', 'Parents_Family.PDF', null, null, '2', 'Parents_Family','Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('13', 'Alumni_FriendsUNCC.PDF', null, null, '6', 'Alumni_Friends','Summer2');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('14', 'Faculty_StaffUNCC.PDF', null, null, '1', 'Faculty_Staff','Summer1');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('15', 'Community_EngageUNCC.PDF', null, null, '2', 'Community_Engagaement','Fall');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('16', 'ResearchUNCC.PDF', null, null, '4', 'Research','Spring');
+
 
 /* clickson */
 DELETE FROM `clickson`;
@@ -441,41 +462,20 @@ INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('
 INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M16','Industrial Engineering',300);
 
 
-/* resources */ 
-DELETE FROM `resources`;
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('1', 'SportsUNCC.PDF', '', 'NULL', '0','Sports', 'Fall')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('2', 'CultureUNCC.PDF', '', 'NULL', '2','Culture', 'Spring')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('3', 'Housing.PDF', '', 'NULL', '1', 'Housing','Summer1')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('4', 'TravelUNCC.PDF', '', 'NULL', '4', 'Travel','Summer2')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('5', 'CampusLifeUNCC.PDF', '', 'NULL', '2', 'CampusLife','Summer1')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('6', 'LibraryUNCC.PDF', '', 'NULL', '3', 'Library', 'Spring')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('7', 'AcademicsUNCC.PDF', '', 'NULL', '1', 'Academics','Summer2')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('8', 'SecurityUNCC.PDF', '', 'NULL', '5', 'Security', 'Fall')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('9', 'AdmissionsUNCC.PDF', '', 'NULL', '2', 'Admissions', 'Spring')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('10', 'AboutUNCC.PDF', '', 'NULL', '7', 'AboutUNCC','Summer1')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES (11', 'VisitCampusUNCC.PDF', '', 'NULL', '6', 'VisitCampus','Fall')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('12', 'Parents_Family.PDF', '', 'NULL', '2', 'Parents_Family','Spring')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('13', 'Alumni_FriendsUNCC.PDF', '', 'NULL', '6', 'Alumni_Friends','Summer2')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('14', 'Faculty_StaffUNCC.PDF', '', 'NULL', '1', 'Faculty_Staff','Summer1')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('15', 'Community_EngageUNCC.PDF', '', 'NULL', '2', 'Community_Engagaement','Fall')
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('16', 'ResearchUNCC.PDF', '', 'NULL', '4', 'Research','Spring')
-
-
-
 /* Address */ 
 DELETE FROM `address`;
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('AmirAzmoon@uncc.edu', '100 Church Street', 'Charlotte', 'NC', '28100', '100', '100', 'NorthWest')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('ChloeHunter@uncc.edu', '200 South Street', 'Montgomery', 'Alabama', '10200', '200', '200', 'South')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('DineashPanchananam@uncc.edu','300', 'Reading', 'SC', '30300', '300', '300', 'NorthWest')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('EbrahimMughal@uncc.edu', '400 North Street', 'Phoenix', 'Phoenix', '40400', '400', '400', 'NorthEast')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('GrayCarolyn@uncc.edu', '500','500Trade Street', '	Little Rock', '50500', '500', '500', 'Arkansas')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('JaiDave@uncc.edu', '600 Harris Blvd', 'Sacramento', 'California', '60600', '600', '600', 'Asia')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('JayShah@uncc.edu', '700 College Street', 'San Francisco', 'California', '70700', '700', '700', 'NAmerica')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('KatherineRees@uncc.edu', '800 University Area ', 'Denver', 'Colorado', '80800', '800', '800', 'Asia')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('KrantiChinnaokotla@uncc.edu', '900 Mills Blvd', 'Newyork', 'Newyork', '90900', '900', '900', 'NAmerica')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('LakshmiVenkataSowmyaAndal@uncc.edu', '1000 Spiritual Blvd', 'Boise', 'Idaho', '11000', '1000','1000', 'South')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('MackenzieLeonard@uncc.edu', '1100 North Cross Street', 'Wilmington', 'Delaware', '11100', '1100', '1100','NAmerica')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('PetersAbigail@uncc.edu', '1200 Center City ', 'Houston', 'Texas', '11200', '1200', '1200', 'NAmerica')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('RajahChacko@uncc.edu', '1300 Church Lane', 'Pittsburgh', 'PA', '11300', '1300', '1300', 'NAmerica')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('SujitNanda@uncc.edu', '1400 Rolling St', 'Raleigh', 'NC', '11400', '1400', '1400', '1400')
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('SukritiRoy@uncc.edu', '1500 Cherry Blossoms', 'Charlotte', 'NC', '11500', '1500', '1500', 'NAmerica')
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('AmirAzmoon@uncc.edu', '100 Church Street', 'Charlotte', 'NC', '28100', '100', '100', 'NorthWest');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('ChloeHunter@uncc.edu', '200 South Street', 'Montgomery', 'Alabama', '10200', '200', '200', 'South');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('DineashPanchananam@uncc.edu','300', 'Reading', 'SC', '30300', '300', '300', 'NorthWest');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('EbrahimMughal@uncc.edu', '400 North Street', 'Phoenix', 'Phoenix', '40400', '400', '400', 'NorthEast');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('GrayCarolyn@uncc.edu', '500','500Trade Street', '	Little Rock', '50500', '500', '500', 'Arkansas');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('JaiDave@uncc.edu', '600 Harris Blvd', 'Sacramento', 'California', '60600', '600', '600', 'Asia');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('JayShah@uncc.edu', '700 College Street', 'San Francisco', 'California', '70700', '700', '700', 'NAmerica');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('KatherineRees@uncc.edu', '800 University Area ', 'Denver', 'Colorado', '80800', '800', '800', 'Asia');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('KrantiChinnaokotla@uncc.edu', '900 Mills Blvd', 'Newyork', 'Newyork', '90900', '900', '900', 'NAmerica');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('LakshmiVenkataSowmyaAndal@uncc.edu', '1000 Spiritual Blvd', 'Boise', 'Idaho', '11000', '1000','1000', 'South');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('MackenzieLeonard@uncc.edu', '1100 North Cross Street', 'Wilmington', 'Delaware', '11100', '1100', '1100','NAmerica');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('PetersAbigail@uncc.edu', '1200 Center City ', 'Houston', 'Texas', '11200', '1200', '1200', 'NAmerica');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('RajahChacko@uncc.edu', '1300 Church Lane', 'Pittsburgh', 'PA', '11300', '1300', '1300', 'NAmerica');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('SujitNanda@uncc.edu', '1400 Rolling St', 'Raleigh', 'NC', '11400', '1400', '1400', '1400');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('SukritiRoy@uncc.edu', '1500 Cherry Blossoms', 'Charlotte', 'NC', '11500', '1500', '1500', 'NAmerica');
