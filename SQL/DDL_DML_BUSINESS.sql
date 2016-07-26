@@ -461,7 +461,12 @@ INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Agency St
 INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('A.K. Sutton Scholarship',4000,3);
 INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Bonnie Cone Scholarship',3800,3);
 INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Alumni Scholarships for Merit',12000,3.3);
-INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Grant Thornton Scholarship',1000,4);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Sports Quota',1000,4);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('GA Scholar',1000,4);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('TA Scholar',1000,4);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Jagannath Scholar',1000,4);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('John Scholarship',1000,4);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Doe Thornton Scholarship',1000,4);
 
 
 /* Insertion into  extracurricularactivities */
@@ -558,7 +563,12 @@ INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES 
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (7,'LivelyBlake@uncc.edu', 'Lively Blake',756272);
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (8,'AnneLee@uncc.edu', 'Anne Lee',941893);
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (9,'SeanMathis@uncc.edu', 'Sean Mathis',629994);
-INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (10,'StephenMorgan@uncc.edu', 'Stephen Morgan',873444);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (10,'uncs1@uncc.edu', 'John Doe',873444);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (11,'uncs12@uncc.edu', 'Albert Einstein',873444);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (12,'uncs13@uncc.edu', 'Sebastien Vettel',873444);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (13,'uncs14@uncc.edu', 'Gary Cahill',873444);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (14,'uncs15@uncc.edu', 'Eden Hazzard',873444);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (15,'uncs16@uncc.edu', 'Clint Eastwood',873444);
 
 /* Insertion into  resources */
 
