@@ -1,53 +1,60 @@
--- Allow staff to search based on  major 
+CREATE VIEW `Search by MAJOR` AS
+-- Allow staff to search based on  major 
 
-SELECT idAspiringStudent, email,Name,Degree, MajorID,MajorName,EducationalPrereq, MinGPA,InstateTution, OutStateTution, NumCourses
-
-FROM
-
-	AspiringStudent, Seeking, Major
-
-WHERE
-
-	email.AspiringStudent = email.Seeking AND 
-	MajorID.Seeking = MajorID.Major AND
-	Major = ‘Input Variable’
-
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
--- Allow staff to search based on  Degree seeking 
-SELECT idAspiringStudent, email,Name,Degree, MajorID,MajorName,EducationalPrereq, MinGPA,InstateTution, OutStateTution, NumCourses
+SELECT DISTINCT (A.email)
 
 FROM
 
-	AspiringStudent, Seeking, Major
+	AspiringStudent A, Major M, Seeking S
 
 WHERE
+	 
+    S.MajorID='M4' AND
+    A.email=S.email;
 
-	email.AspiringStudent = email.Seeking AND 
-	MajorID.Seeking = MajorID.Major AND
-	Degree = ‘Input Variable’
+==================>>>>>>>>>>>>>>>
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
--- Allow staff to search based on  Location
+CREATE VIEW `Search by DEGREE SEEKING` AS
+-- Allow staff to search based on  DEGREE 
 
-SELECT idAspiringStudent, email,Name, city, state,zip code,region
+SELECT DISTINCT (A.email)
 
 FROM
 
-	AspiringStudent, Address
+	AspiringStudent A, Major M, Seeking S
 
 WHERE
+	 
+    S.Degree='BS' AND
+    A.email=S.email;
 
-	email.AspiringStudent = email.Address AND 
-	zipcode = ‘Input Variable’
-	
--- Allow staff to search based on  Geography 
-SELECT idAspiringStudent, email,Name, city, state,zip code,region
+==================>>>>>>>>>>>>>>>>>
+
+
+CREATE VIEW `Search by city` AS
+-- Create report by Location
+SELECT DISTINCT (A.email)
 
 FROM
 
-	AspiringStudent, Address
+	AspiringStudent A, Address D
 
 WHERE
+	 
+    A.email=D.email AND
+    D.city = 'Charlotte';
 
-	email.AspiringStudent = email.Address AND 
-	region = ‘Input Variable’
+==============>>>>>>>>>>>>>>>>
+
+CREATE VIEW `Search by REGION` AS
+-- Create report by Geography/region
+SELECT DISTINCT (A.email)
+
+FROM
+
+	AspiringStudent A, Address D
+
+WHERE
+	 
+    A.email=D.email AND
+    D.region = 'south';
