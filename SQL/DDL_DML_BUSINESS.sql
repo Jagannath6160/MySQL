@@ -909,9 +909,6 @@ CREATE VIEW `Resources available to Student` AS
 Select StudentLifeDoc From Resources;
 
 
-/* 7. Allow a student to search for resources based on the specialization */
-
-
 /* Allow the student to view resources based on specialization */
 
 CREATE VIEW `View Resources based on specialization` AS
@@ -920,8 +917,7 @@ From Resources
 where Specialization like 'sports';
 
 
-/* 8. Allow staff to view reports based on specific criteria such as G.P.A and GRE/S.A.T score. */
-
+/* 7. Allow staff to view reports based on specific criteria such as G.P.A and GRE/S.A.T score. */
 
 /* Search based on G.P.A and SAT */
 
@@ -935,7 +931,7 @@ Select * from major m, GraduateDegree g where g.MajorID =m.MajorID and m.MinGPA=
 
 
 
-/* -- 9. Allow staff to search based on  Geography and Location*/
+/* -- 8. Allow staff to search based on  Geography and Location*/
 
 
 /*  Allow staff to search by Location / City */
@@ -965,7 +961,7 @@ WHERE
 
 
 
-/* -- 10. Allow staff to View reports to recruit and reach out to students based on their extracurricular  activities and Academics */
+/* -- 9. Allow staff to View reports to recruit and reach out to students based on their extracurricular  activities and Academics */
 
 
 /* Allow staff to View reports to recruit and reach out to students based on the extracurricular activity name */
@@ -983,7 +979,7 @@ from      aspiringstudent
 and        TestScore > 300;
 
 
-/* -- 11. Allow staff to view reports based on resources accessed by the students. */
+/* -- 10. Allow staff to view reports based on resources accessed by the students. */
 
 
 /* Allow staff to view the resources accessed by a student */
