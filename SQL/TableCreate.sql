@@ -1,6 +1,3 @@
---Jagannath Group Team2 SQL Script
--- Script to create tables and populate data and queries for business functions
-
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
@@ -38,7 +35,6 @@ CREATE TABLE IF NOT EXISTS `UNIVERSITYDB`.`Resources` (
   `idResource` INT UNSIGNED NOT NULL,
   `StudentLifeDoc` VARCHAR(45) NULL DEFAULT 'noname.PDF',
   `StudentLifeDocContents` BLOB NULL,
-  `FAFSA` VARCHAR(100) NULL,
   `TimesDownloaded` SMALLINT NULL,
   `Specialization` VARCHAR(45) NULL,
   `AcademicCalendar` VARCHAR(45) NULL,
