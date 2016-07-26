@@ -413,22 +413,22 @@ INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('19','Spr
 
 /* Insertion into major */
 
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M1','B.S in Mathematics','High School',3,4000,7000,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M2','B.S in Physics  ','High School',3,4000,7000,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M3','B.S in Computer Science','High School',3,4000,7000,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M4','B.S in Mechanical Engineering','High School',3,3800,6800,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M5','B.S in Civil Engineering','High School',3,3800,6800,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M6','B.S in Computer Engineering','High School',3,5500,8500,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M7','B.S in Industrial Engineering','High School',3,5500,8500,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M8','B.S in Chemistry','High School',3,4400,7400,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M9','M.S in Mathematics','Bachelor',3,4400,7400,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M10','M.S in Physics  ','Bachelor',3.2,5000,8000,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M11','M.S in Computer Science','Bachelor',3.2,5000,8000,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M12','M.S in Mechanical Engineering','Bachelor',3.2,5000,8000,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M13','M.S in Civil Engineering','Bachelor',3.2,6000,9000,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M14','M.S in Computer Engineering','Bachelor',3.2,6000,9000,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M15','M.S in Industrial Engineering','Bachelor',3.2,6000,9000,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M16','M.S in Chemistry','Bachelor',3.2,6000,9000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M1','Mathematics','High School',3,4000,7000,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M2','Physics  ','High School',3,4000,7000,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M3','Computer Science','High School',3,4000,7000,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M4','Mechanical Engineering','High School',3,3800,6800,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M5','Civil Engineering','High School',3,3800,6800,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M6','Computer Engineering','High School',3,5500,8500,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M7','Industrial Engineering','High School',3,5500,8500,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M8','Chemistry','High School',3,4400,7400,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M9','Accounting','High School',3,4400,7400,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M10','Anthropology','High School',3.2,5000,8000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M11','Criminal Justice','High School',3.2,5000,8000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M12','Economics','High School',3.2,5000,8000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M13','English','High School',3.2,6000,9000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M14','History','High School',3.2,6000,9000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M15','Meteorology','High School',3.2,6000,9000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M16','Political Science','High School',3.2,6000,9000,10);
 
 
 /* undergraduatedegree */
@@ -440,7 +440,14 @@ INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALU
 INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M5','Civil Engineering',270);
 INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M6','Computer Engineering',270);
 INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M7','Industrial Engineering',270);
-INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M8','Chemistry',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M9','Accounting',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M10','Anthropology',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M11','Criminal Justice',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M12','Economics',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M13','English',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M14','History',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M15','Meteorology',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M16','Political Science',270);
 
 
 /* Insertion into  financialassistance */
@@ -738,14 +745,14 @@ INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('
 INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M6','Civil Engineering',260);
 INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M7','Electrical and Computer Engineering',270);
 INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M8','Industrial Engineering',270);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M9','Computer Science',290);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M10','Mathematics',290);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M11','Physics',290);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M12','Chemistry',260);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M13','Mechanical Engineering',290);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M14','Civil Engineering',300);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M15','Electrical and Computer Engineering',300);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M16','Industrial Engineering',300);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M9','Accounting',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M10','Anthropology',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M11','Criminal Justice',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M12','Economics',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M13','English',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M14','History',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M15','Meteorology',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M16','Political Science',270);
 
 
 /* Insertion into Address */ 
