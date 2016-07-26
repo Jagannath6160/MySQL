@@ -920,8 +920,8 @@ Select StudentLifeDoc From Resources;
 
 /* Allow the student to view resources based on specialization */
 
-CREATE VIEW `View Resources based on specialization` AS
-Select Specialization
+CREATE VIEW `View Resources based on specialization ` AS
+Select StudentLifeDoc, StudentLifeDocContents
 From Resources
 where Specialization like 'sports';
 
