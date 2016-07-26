@@ -1,5 +1,5 @@
--- Jagannath Group Team2 DDL Script
--- Script to create tables and populate data
+-- Jagannath Group Team2 SQL Script
+/*  Script to create tables, populate tables with data and also contains queries for business functions */
 
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
