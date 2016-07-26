@@ -718,7 +718,7 @@ INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Agency Start Scholarship','M6'
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('A.K. Sutton Scholarship','M7');
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Bonnie Cone Scholarship','M8');
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Alumni Scholarships for Merit','M9');
-INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Grant Thornton Scholarship','M10');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('John Scholarship','M10');
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Belk Scholarships','M11');
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Turing Scholarships','M12');
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Federal Grants','M13');
