@@ -267,7 +267,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `UNIVERSITYDB`.`UndergraduateDegree` (
   `MajorID` VARCHAR(15) NOT NULL,
-  `USpecialization` VARCHAR(30) NOT NULL,
+  `USpecialization` VARCHAR(50) NOT NULL,
   `SATScore` SMALLINT NOT NULL,
   PRIMARY KEY (`MajorID`),
   CONSTRAINT `MajorID`
@@ -283,7 +283,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `UNIVERSITYDB`.`GraduateDegree` (
   `MajorID` VARCHAR(15) NOT NULL,
-  `GSpecialization` VARCHAR(30) NOT NULL,
+  `GSpecialization` VARCHAR(50) NOT NULL,
   `GREScore` SMALLINT NOT NULL,
   PRIMARY KEY (`MajorID`),
   CONSTRAINT `5MajorID`
