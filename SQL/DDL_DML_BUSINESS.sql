@@ -850,7 +850,7 @@ SELECT A.email, A.FirstName, A.LastName, MajorName
 FROM
 	AspiringStudent A, Major M, Seeking S
 WHERE
-    M.MajorName='B.S in Computer Engineering' AND
+    M.MajorName='Computer Engineering' AND
     S.MajorID=M.MajorID AND
     A.email=S.email
     Order By A.FirstName;
