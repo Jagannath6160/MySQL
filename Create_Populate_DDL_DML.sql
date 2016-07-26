@@ -775,9 +775,9 @@ INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`buildi
 
 
 
-================
+--================
 --1. Allow a Student to create a login and password
-============
+--============
 /* The student would be able to create a new account. The user would be able to provide his information like email, FirstName, LastName ,password, his GPA and his Test Score. */
 
 INSERT INTO `aspiringstudent` (`email`, `LastName`, `FirstName`, `Password`, `GPA`, `TestScore`) VALUES ('rvanga@gmail.com', 'Vang', 'Rajes', 'passwor', '3.5', '315');
@@ -785,9 +785,9 @@ INSERT INTO `aspiringstudent` (`email`, `LastName`, `FirstName`, `Password`, `GP
 INSERT INTO `aspiringstudent` (`email`, `LastName`, `FirstName`, `Password`, `GPA`, `TestScore`) VALUES  ('johndoe@gmail.com', 'Doe', 'John', 'password', '3.5','310');
 
 
-================
+--================
 --2. Allow the student to update and maintain his profile
-============
+--============
 /* The student would be able to update his account details. He would be able to change his FirstName, LastName, password , his GPA and his Test Score. */
 
 UPDATE `aspiringstudent` SET `LastName` = 'Vanga', `FirstName` = 'Rajesh', `Password` = 'password', `GPA` = '3.75', `TestScore` = '325' WHERE `aspiringstudent`.`email` = 'rvanga@gmail.com';
@@ -833,9 +833,9 @@ INSERT INTO `seeking` (`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('MS', 
 UPDATE `seeking` SET `Degree` = 'phD', `MajorID` = 'M10' WHERE `seeking`.`Email` = 'rvanga@gmail.com' AND `seeking`.`MajorID` = 'M13';
 
 
-================
+--================
 --3. Allow staff to search based on Major and Degree seeked
-============
+--============
 
 /* Allow staff to search based on Major */
 
@@ -863,9 +863,9 @@ WHERE
     GROUP BY A.email;
 
 
-================
+--================
 -- 4. Allow staff to search based on  favorite extracurricular activities. 
-================
+--================
 
 /* -- Allow staff to search based on  favorite extracurricular activities. */
 
@@ -879,9 +879,9 @@ WHERE
     A.email=E.Email
     Order By A.FirstName;
 
-================
+--================
 -- 5. Allow staff to view student(s) G.P.A and GRE/SAT score. 
-================
+--================
 
 /* Allow staff to view a student’s G.P.A and S.A.T Score  */
 
@@ -895,18 +895,18 @@ CREATE VIEW `Search Students by Extracurricular Activity name` AS
 SELECT a.email, a.testscore, a.GPA FROM aspiringstudent a WHERE a.email="rvanga@gmail.com";
 
 
-================
+--================
 -- 6. Allow a student to locate the Resources and access any of the resource.
-================
+--================
 
 /* Allow the student to locate all the resources available to him.  */
 
 CREATE VIEW `Resources available to Student ` AS
 Select StudentLifeDoc From Resources;
 
-================
+--================
 --7. Allow a student to search for resources based on the specialization */
-================
+--================
 
 /* Allow the student to view resources based on specialization */
 
@@ -915,9 +915,9 @@ Select Specialization
 From Resources
 where Specialization like 'sports';
 	
-===============
+--===============
 -- 8. Allow staff to view reports based on specific criteria such as G.P.A and GRE/S.A.T score.
-===============
+--===============
 
 /* Search based on G.P.A and SAT */
 
@@ -931,9 +931,9 @@ CREATE VIEW `Search based on GPA and GRE ` AS
 Select * from major m, GraduateDegree g where g.MajorID =m.MajorID and m.MinGPA 3=3.00 and  g.GREScore =270;
 
 
-===============
+--===============
 -- 9. Allow staff to search based on  Geography and Location
-===============
+--===============
 
 /*  Allow staff to search by Location / City */
 
@@ -961,9 +961,9 @@ WHERE
     D.Region = 'South';
 
 
-===============
+--===============
 -- 10. Allow staff to View reports to recruit and reach out to students based on their extracurricular  activities and Academics
-===============
+--===============
 
 /* Allow staff to View reports to recruit and reach out to students based on the extracurricular activity name */
 
@@ -979,9 +979,9 @@ from      aspiringstudent
            where   GPA > '3.50'
 and        TestScore > 300;
 
-===============
+--===============
 -- 11. Allow staff to view reports based on resources accessed by the students.
-===============
+--===============
 
 /* Allow staff to view the resources accessed by a student */
 
