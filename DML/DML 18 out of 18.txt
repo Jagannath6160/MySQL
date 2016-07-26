@@ -14,11 +14,68 @@ TRUNCATE courses;
 TRUNCATE undergraduatedegree;
 TRUNCATE graduatedegree;
 TRUNCATE contacts;
+TRUNCATE stateregion;
 
 
 --  -----------------
 -- Delete command may create foreign key violation same as truncate
 
+/* `stateregion` */
+DELETE FROM `stateregion`;
+insert into STATEREGION (state, stateAbbr, region) values ('Alabama','AL','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Alaska','AK','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Arizona','AZ','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Arkansas','AR','South');
+insert into STATEREGION (state, stateAbbr, region) values ('California','CA','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Colorado','CO','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Connecticut','CT','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('Delaware','DE','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('Florida','FL','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Georgia','GA','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Hawaii','HI','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Idaho','ID','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Illinois','IL','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Indiana','IN','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Iowa','IA','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Kansas','KS','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Kentucky','KY','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Louisiana','LA','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Maine','ME','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('Maryland','MD','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Massachusetts','MA','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('Michigan','MI','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Minnesota','MN','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Mississippi','MS','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Missouri','MO','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Montana','MT','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Nebraska','NE','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Nevada','NV','West');
+insert into STATEREGION (state, stateAbbr, region) values ('New Hampshire','NH','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('New Jersey','NJ','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('New Mexico','NM','West');
+insert into STATEREGION (state, stateAbbr, region) values ('New York','NY','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('North Carolina','NC','South');
+insert into STATEREGION (state, stateAbbr, region) values ('North Dakota','ND','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Ohio','OH','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Oklahoma','OK','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Oregon','OR','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Pennsylvania','PA','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('Rhode Island','RI','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('South Carolina','SC','South');
+insert into STATEREGION (state, stateAbbr, region) values ('South Dakota','SD','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Tennessee','TN','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Texas','TX','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Utah','UT','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Vermont','VT','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('Virginia','VA','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Washington','WA','West');
+insert into STATEREGION (state, stateAbbr, region) values ('West Virginia','WV','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Wisconsin','WI','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Wyoming','WY','West');
+-- adding Washington, DC.
+insert into STATEREGION (state, stateAbbr, region) values ('Washington DC','DC','South');
+-- adding XX as International.
+insert into STATEREGION (state, stateAbbr, region) values ('International','XX','International');
 
 /* `courses` */
 DELETE FROM `courses`;
