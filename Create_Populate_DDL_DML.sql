@@ -16,6 +16,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 CREATE SCHEMA IF NOT EXISTS `UNIVERSITYDB` DEFAULT CHARACTER SET utf8 ;
 USE `UNIVERSITYDB` ;
 
+
 -- -----------------------------------------------------
 -- Table `UNIVERSITYDB`.`AspiringStudent`
 -- -----------------------------------------------------
@@ -119,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `UNIVERSITYDB`.`Address` (
   `email` VARCHAR(45) NOT NULL,
   `streetName` VARCHAR(30) NULL DEFAULT NULL,
   `city` VARCHAR(15) NULL DEFAULT NULL,
-  `state` VARCHAR(20) NULL DEFAULT NULL,
+  `state` VARCHAR(2) NULL DEFAULT NULL,
   `zipcode` VARCHAR(10) NULL DEFAULT NULL,
   `building` VARCHAR(20) NULL DEFAULT NULL,
   `apartment` VARCHAR(20) NULL DEFAULT NULL,
@@ -293,19 +294,79 @@ CREATE TABLE IF NOT EXISTS `UNIVERSITYDB`.`GraduateDegree` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
+-- Create a static reference table containing two-letter state abbreviation (PK), state, and census region. 
+-- -----------------------------------------------------
+-- Table `UNIVERSITYDB`.`StateRegion`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `UNIVERSITYDB`.`StateRegion` ( 
+`StateAbbr` CHAR(2) NOT NULL , 
+`State` VARCHAR(15) NOT NULL , 
+`Region` VARCHAR(20) NOT NULL , 
+PRIMARY KEY (`StateAbbr`(2))) 
+ENGINE = InnoDB;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
+/* Insertion into `stateregion` */
 
+insert into STATEREGION (state, stateAbbr, region) values ('Alabama','AL','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Alaska','AK','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Arizona','AZ','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Arkansas','AR','South');
+insert into STATEREGION (state, stateAbbr, region) values ('California','CA','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Colorado','CO','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Connecticut','CT','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('Delaware','DE','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('Florida','FL','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Georgia','GA','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Hawaii','HI','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Idaho','ID','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Illinois','IL','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Indiana','IN','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Iowa','IA','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Kansas','KS','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Kentucky','KY','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Louisiana','LA','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Maine','ME','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('Maryland','MD','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Massachusetts','MA','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('Michigan','MI','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Minnesota','MN','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Mississippi','MS','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Missouri','MO','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Montana','MT','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Nebraska','NE','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Nevada','NV','West');
+insert into STATEREGION (state, stateAbbr, region) values ('New Hampshire','NH','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('New Jersey','NJ','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('New Mexico','NM','West');
+insert into STATEREGION (state, stateAbbr, region) values ('New York','NY','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('North Carolina','NC','South');
+insert into STATEREGION (state, stateAbbr, region) values ('North Dakota','ND','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Ohio','OH','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Oklahoma','OK','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Oregon','OR','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Pennsylvania','PA','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('Rhode Island','RI','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('South Carolina','SC','South');
+insert into STATEREGION (state, stateAbbr, region) values ('South Dakota','SD','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Tennessee','TN','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Texas','TX','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Utah','UT','West');
+insert into STATEREGION (state, stateAbbr, region) values ('Vermont','VT','Northeast');
+insert into STATEREGION (state, stateAbbr, region) values ('Virginia','VA','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Washington','WA','West');
+insert into STATEREGION (state, stateAbbr, region) values ('West Virginia','WV','South');
+insert into STATEREGION (state, stateAbbr, region) values ('Wisconsin','WI','Midwest');
+insert into STATEREGION (state, stateAbbr, region) values ('Wyoming','WY','West');
+-- adding Washington, DC.
+insert into STATEREGION (state, stateAbbr, region) values ('Washington DC','DC','South');
+-- adding XX as International.
+insert into STATEREGION (state, stateAbbr, region) values ('International','XX','International');
 
-
---  -----------------
--- Delete command may create foreign key violation same as truncate
-
-
-/* `courses` */
+/* Insertion into `courses` */
 
 INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('1','Physics I');
 INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('2','Physics II');
@@ -328,7 +389,7 @@ INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('18','Structural Steel I
 INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('19','Statics');
 INSERT INTO `courses`(`CourseID`, `CourseName`) VALUES ('20','Capital Estimating');
 
-/*  semestersoffered */
+/* Insertion into semestersoffered */
 
 INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('1','Summer II');
 INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('2','Summer I');
@@ -351,7 +412,7 @@ INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('18','Sum
 INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('19','Spring');
 
 
-/* major */
+/* Insertion into major */
 
 INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M1','B.S in Mathematics','High School',3,4000,7000,40);
 INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M2','B.S in Physics  ','High School',3,4000,7000,40);
@@ -383,7 +444,7 @@ INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALU
 INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M8','Chemistry',270);
 
 
-/* financialassistance */
+/* Insertion into  financialassistance */
 
 INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Belk Scholarships','2500','2.5');
 INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Turing Scholarships',3500,2.9);
@@ -397,7 +458,7 @@ INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Alumni Sc
 INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Grant Thornton Scholarship',1000,4);
 
 
-/* extracurricularactivities */
+/* Insertion into  extracurricularactivities */
 
 INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Soccer',1);
 INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Basketball',2);
@@ -416,7 +477,7 @@ INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularI
 INSERT INTO `extracurricularactivities`(`ExtraCurricularName`, `ExtraCurricularID`) VALUES ('Student Activities',15);
 
 
-/* aspiringstudent */
+/* Insertion into  aspiringstudent */
 
 INSERT INTO `aspiringstudent`( `email`, `LastName`, `FirstName`,  `Password`, `GPA`, `TestScore`) VALUES ('AmirAzmoon@uncc.edu','Azmoon', 'Amir', '761757', '3.4', '320');
 INSERT INTO `aspiringstudent`( `email`, `LastName`, `FirstName`,  `Password`, `GPA`, `TestScore`) VALUES ('JayShah@uncc.edu','Shah', 'Jay', '751158', '3.5', '303' );
@@ -435,7 +496,7 @@ INSERT INTO `aspiringstudent`( `email`, `LastName`, `FirstName`,  `Password`, `G
 INSERT INTO `aspiringstudent`( `email`, `LastName`, `FirstName`,  `Password`, `GPA`, `TestScore`) VALUES ('MackenzieLeonard@uncc.edu','Leonard', 'Mackenzie','422458', '3.2', '301');
 
 
-/* enjoys */
+/* Insertion into  enjoys */
 
 INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,1,'AmirAzmoon@uncc.edu',1);
 INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,2,'JayShah@uncc.edu',2);
@@ -458,6 +519,7 @@ INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricul
 INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,3,'PetersAbigail@uncc.edu',9);
 INSERT INTO `enjoys`(`AcademicLetter`, `YearExperience`, `Email`, `ExtraCurricularID`) VALUES (1,4,'MackenzieLeonard@uncc.edu',10);
 
+/* Insertion into  contacts */
 
 INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('AmirAzmoon@uncc.edu','426-168-2339',1);
 INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('JayShah@uncc.edu','519-558-9869',0);
@@ -479,9 +541,7 @@ INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('PetersAbiga
 INSERT INTO `Contacts` (`email`,`phone`,`preferredContact`) VALUES ('MackenzieLeonard@uncc.edu','233-624-9876',1);
 
 
-
-
-
+/* Insertion into  staff */
 
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (1,'SueRussell@uncc.edu', 'Sue Russell',424784);
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (2,'RobertUnderwood@uncc.edu', 'Robert Underwood',265993);
@@ -493,6 +553,8 @@ INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES 
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (8,'AnneLee@uncc.edu', 'Anne Lee',941893);
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (9,'SeanMathis@uncc.edu', 'Sean Mathis',629994);
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (10,'StephenMorgan@uncc.edu', 'Stephen Morgan',873444);
+
+/* Insertion into  resources */
 
 INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('1', 'SportsUNCC.PDF', '', 'NULL', '0','Sports', 'Fall');
 INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('2', 'CultureUNCC.PDF', '', 'NULL', '2','Culture', 'Spring');
@@ -512,7 +574,7 @@ INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`
 INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('16', 'ResearchUNCC.PDF', '', 'NULL', '4', 'Research','Spring');
 
 
-/* clickson */
+/*I Insertion into clickson */
 
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (1,'AmirAzmoon@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (2,'JayShah@uncc.edu');
@@ -545,7 +607,7 @@ INSERT INTO `clickson`(`idResource`, `email`) VALUES (8,'SujitNanda@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (9,'KatherineRees@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (10,'ChloeHunter@uncc.edu');
 
-/* offers */
+/* Insertion into offers */
 
 INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('1','M1');
 INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('2','M1');
@@ -628,8 +690,9 @@ INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('18','M14');
 INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('19','M15');
 INSERT INTO `offers`(`CourseID`, `MajorID`) VALUES ('20','M16');
 
-/* offered */
-DELETE FROM `offered`;
+/* Insertion into offered */
+
+
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Belk Scholarships','M1');
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Turing Scholarships','M2');
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Federal Grants','M3');
@@ -648,7 +711,7 @@ INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Levine Scholars Program','M15'
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Agency Start Scholarship','M16');
 
 
-/*  seeking */
+/* Insertion into seeking */
 
 INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('BS','2016-06-29','AmirAzmoon@uncc.edu','M1');
 INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('BS','2016-05-18','JayShah@uncc.edu','M2');
@@ -666,7 +729,7 @@ INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('MS','2
 INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('MS','2015-05-18','PetersAbigail@uncc.edu','M14');
 INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('MS','2015-01-07','MackenzieLeonard@uncc.edu','M15');
 
-/* graduatedegree */ 
+/* Insertion into graduatedegree */ 
 
 INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M1','Computer Science',250);
 INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M2','Mathematics',250);
@@ -686,24 +749,20 @@ INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('
 INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M16','Industrial Engineering',300);
 
 
-/* resources */ 
+/* Insertion into Address */ 
 
-
-
-/* Address */ 
-
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('AmirAzmoon@uncc.edu', '100 Church Street', 'Charlotte', 'NC', '28100', '100', '100', 'NorthWest');
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('ChloeHunter@uncc.edu', '200 South Street', 'Montgomery', 'Alabama', '10200', '200', '200', 'South');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('AmirAzmoon@uncc.edu', '100 Church Street', 'Charlotte', 'NC', '28100', '100', '100', 'Northwest');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('ChloeHunter@uncc.edu', '200 South Street', 'Montgomery', 'AL', '10200', '200', '200', 'South');
 INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('DineashPanchananam@uncc.edu','300', 'Reading', 'SC', '30300', '300', '300', 'NorthWest');
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('EbrahimMughal@uncc.edu', '400 North Street', 'Phoenix', 'Phoenix', '40400', '400', '400', 'NorthEast');
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('GrayCarolyn@uncc.edu', '500','500Trade Street', '	Little Rock', '50500', '500', '500', 'South');
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('JaiDave@uncc.edu', '600 Harris Blvd', 'Sacramento', 'California', '60600', '600', '600', 'North');
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('JayShah@uncc.edu', '700 College Street', 'San Francisco', 'California', '70700', '700', '700', 'West');
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('KatherineRees@uncc.edu', '800 University Area ', 'Denver', 'Colorado', '80800', '800', '800', 'East');
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('KrantiChinnaokotla@uncc.edu', '900 Mills Blvd', 'Newyork', 'Newyork', '90900', '900', '900', 'North');
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('LakshmiVenkataSowmyaAndal@uncc.edu', '1000 Spiritual Blvd', 'Boise', 'Idaho', '11000', '1000','1000', 'South');
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('MackenzieLeonard@uncc.edu', '1100 North Cross Street', 'Wilmington', 'Delaware', '11100', '1100', '1100','North');
-INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('PetersAbigail@uncc.edu', '1200 Center City ', 'Houston', 'Texas', '11200', '1200', '1200', 'North');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('EbrahimMughal@uncc.edu', '400 North Street', 'Phoenix', 'TX', '40400', '400', '400', 'Southeast');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('GrayCarolyn@uncc.edu', '500 Trade Street', '	Little Rock', 'UT', '50500', '500', '500', 'South');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('JaiDave@uncc.edu', '600 Harris Blvd', 'Sacramento', 'CA', '60600', '600', '600', 'North');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('JayShah@uncc.edu', '700 College Street', 'San Francisco', 'CA', '70700', '700', '700', 'West');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('KatherineRees@uncc.edu', '800 University Area ', 'Denver', 'CO', '80800', '800', '800', 'East');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('KrantiChinnaokotla@uncc.edu', '900 Mills Blvd', 'Newyork', 'NY', '90900', '900', '900', 'North');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('LakshmiVenkataSowmyaAndal@uncc.edu', '1000 Spiritual Blvd', 'Boise', 'ID', '11000', '1000','1000', 'South');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('MackenzieLeonard@uncc.edu', '1100 North Cross Street', 'Wilmington', 'DE', '11100', '1100', '1100','North');
+INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('PetersAbigail@uncc.edu', '1200 Center City ', 'Houston', 'TX', '11200', '1200', '1200', 'North');
 INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('RajahChacko@uncc.edu', '1300 Church Lane', 'Pittsburgh', 'PA', '11300', '1300', '1300', 'North');
 INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('SujitNanda@uncc.edu', '1400 Rolling St', 'Raleigh', 'NC', '11400', '1400', '1400', 'North');
 INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('SukritiRoy@uncc.edu', '1500 Cherry Blossoms', 'Charlotte', 'NC', '11500', '1500', '1500', 'North');
