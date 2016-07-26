@@ -38,7 +38,6 @@ CREATE TABLE IF NOT EXISTS `UNIVERSITYDB`.`Resources` (
   `idResource` INT UNSIGNED NOT NULL,
   `StudentLifeDoc` VARCHAR(45) NULL DEFAULT 'noname.PDF',
   `StudentLifeDocContents` BLOB NULL,
-  `FAFSA` VARCHAR(100) NULL,
   `TimesDownloaded` SMALLINT NULL,
   `Specialization` VARCHAR(45) NULL,
   `AcademicCalendar` VARCHAR(45) NULL,
@@ -556,22 +555,22 @@ INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES 
 
 /* Insertion into  resources */
 
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('1', 'SportsUNCC.PDF', '', 'NULL', '0','Sports', 'Fall');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('2', 'CultureUNCC.PDF', '', 'NULL', '2','Culture', 'Spring');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('3', 'Housing.PDF', '', 'NULL', '1', 'Housing','Summer1');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('4', 'TravelUNCC.PDF', '', 'NULL', '4', 'Travel','Summer2');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('5', 'CampusLifeUNCC.PDF', '', 'NULL', '2', 'CampusLife','Summer1');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('6', 'LibraryUNCC.PDF', '', 'NULL', '3', 'Library', 'Spring');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('7', 'AcademicsUNCC.PDF', '', 'NULL', '1', 'Academics','Summer2');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('8', 'SecurityUNCC.PDF', '', 'NULL', '5', 'Security', 'Fall');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('9', 'AdmissionsUNCC.PDF', '', 'NULL', '2', 'Admissions', 'Spring');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('10', 'AboutUNCC.PDF', '', 'NULL', '7', 'AboutUNCC','Summer1');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('11', 'VisitCampusUNCC.PDF', '', 'NULL', '6', 'VisitCampus','Fall');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('12', 'Parents_Family.PDF', '', 'NULL', '2', 'Parents_Family','Spring');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('13', 'Alumni_FriendsUNCC.PDF', '', 'NULL', '6', 'Alumni_Friends','Summer2');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('14', 'Faculty_StaffUNCC.PDF', '', 'NULL', '1', 'Faculty_Staff','Summer1');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('15', 'Community_EngageUNCC.PDF', '', 'NULL', '2', 'Community_Engagaement','Fall');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('16', 'ResearchUNCC.PDF', '', 'NULL', '4', 'Research','Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('1', 'SportsUNCC.PDF', '', '0','Sports', 'Fall');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('2', 'CultureUNCC.PDF', '', '2','Culture', 'Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('3', 'Housing.PDF', '', '1', 'Housing','Summer1');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('4', 'TravelUNCC.PDF', '', '4', 'Travel','Summer2');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('5', 'CampusLifeUNCC.PDF', '', '2', 'CampusLife','Summer1');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('6', 'LibraryUNCC.PDF', '', '3', 'Library', 'Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('7', 'AcademicsUNCC.PDF', '', '1', 'Academics','Summer2');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('8', 'SecurityUNCC.PDF', '', '5', 'Security', 'Fall');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('9', 'AdmissionsUNCC.PDF', '', '2', 'Admissions', 'Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('10', 'AboutUNCC.PDF', '', '7', 'AboutUNCC','Summer1');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('11', 'VisitCampusUNCC.PDF', '', '6', 'VisitCampus','Fall');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('12', 'Parents_Family.PDF', '', '2', 'Parents_Family','Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('13', 'Alumni_FriendsUNCC.PDF', '', '6', 'Alumni_Friends','Summer2');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('14', 'Faculty_StaffUNCC.PDF', '', '1', 'Faculty_Staff','Summer1');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('15', 'Community_EngageUNCC.PDF', '', '2', 'Community_Engagaement','Fall');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('16', 'ResearchUNCC.PDF', '', '4', 'Research','Spring');
 
 
 /*I Insertion into clickson */
