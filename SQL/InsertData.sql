@@ -1,3 +1,4 @@
+
 /* Insertion into `stateregion` */
 
 insert into STATEREGION (state, stateAbbr, region) values ('Alabama','AL','South');
@@ -103,22 +104,22 @@ INSERT INTO `semestersoffered`(`CourseID`, `SemestersOffered`) VALUES ('19','Spr
 
 /* Insertion into major */
 
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M1','B.S in Mathematics','High School',3,4000,7000,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M2','B.S in Physics  ','High School',3,4000,7000,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M3','B.S in Computer Science','High School',3,4000,7000,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M4','B.S in Mechanical Engineering','High School',3,3800,6800,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M5','B.S in Civil Engineering','High School',3,3800,6800,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M6','B.S in Computer Engineering','High School',3,5500,8500,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M7','B.S in Industrial Engineering','High School',3,5500,8500,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M8','B.S in Chemistry','High School',3,4400,7400,40);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M9','M.S in Mathematics','Bachelor',3,4400,7400,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M10','M.S in Physics  ','Bachelor',3.2,5000,8000,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M11','M.S in Computer Science','Bachelor',3.2,5000,8000,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M12','M.S in Mechanical Engineering','Bachelor',3.2,5000,8000,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M13','M.S in Civil Engineering','Bachelor',3.2,6000,9000,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M14','M.S in Computer Engineering','Bachelor',3.2,6000,9000,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M15','M.S in Industrial Engineering','Bachelor',3.2,6000,9000,10);
-INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M16','M.S in Chemistry','Bachelor',3.2,6000,9000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M1','Mathematics','High School',3,4000,7000,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M2','Physics  ','High School',3,4000,7000,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M3','Computer Science','High School',3,4000,7000,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M4','Mechanical Engineering','High School',3,3800,6800,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M5','Civil Engineering','High School',3,3800,6800,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M6','Computer Engineering','High School',3,5500,8500,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M7','Industrial Engineering','High School',3,5500,8500,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M8','Chemistry','High School',3,4400,7400,40);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M9','Accounting','High School',3,4400,7400,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M10','Anthropology','High School',3.2,5000,8000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M11','Criminal Justice','High School',3.2,5000,8000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M12','Economics','High School',3.2,5000,8000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M13','English','High School',3.2,6000,9000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M14','History','High School',3.2,6000,9000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M15','Meteorology','High School',3.2,6000,9000,10);
+INSERT INTO `major`(`MajorID`, `MajorName`, `EducationalPrereq`, `MinGPA`, `InstateTuition`, `OutStateTuition`, `NumCourses`) VALUES ('M16','Political Science','High School',3.2,6000,9000,10);
 
 
 /* undergraduatedegree */
@@ -130,7 +131,14 @@ INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALU
 INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M5','Civil Engineering',270);
 INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M6','Computer Engineering',270);
 INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M7','Industrial Engineering',270);
-INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M8','Chemistry',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M9','Accounting',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M10','Anthropology',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M11','Criminal Justice',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M12','Economics',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M13','English',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M14','History',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M15','Meteorology',270);
+INSERT INTO `undergraduatedegree`(`MajorID`, `USpecialization`, `SATScore`) VALUES ('M16','Political Science',270);
 
 
 /* Insertion into  financialassistance */
@@ -144,7 +152,12 @@ INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Agency St
 INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('A.K. Sutton Scholarship',4000,3);
 INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Bonnie Cone Scholarship',3800,3);
 INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Alumni Scholarships for Merit',12000,3.3);
-INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Grant Thornton Scholarship',1000,4);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Sports Quota',1000,4);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('GA Scholar',1000,4);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('TA Scholar',1000,4);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Jagannath Scholar',1000,4);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('John Scholarship',1000,4);
+INSERT INTO `financialassistance`(`Name`, `Amount`, `MinGPA`) VALUES ('Doe Thornton Scholarship',1000,4);
 
 
 /* Insertion into  extracurricularactivities */
@@ -241,26 +254,31 @@ INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES 
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (7,'LivelyBlake@uncc.edu', 'Lively Blake',756272);
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (8,'AnneLee@uncc.edu', 'Anne Lee',941893);
 INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (9,'SeanMathis@uncc.edu', 'Sean Mathis',629994);
-INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (10,'StephenMorgan@uncc.edu', 'Stephen Morgan',873444);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (10,'uncs1@uncc.edu', 'John Doe',873444);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (11,'uncs12@uncc.edu', 'Albert Einstein',873444);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (12,'uncs13@uncc.edu', 'Sebastien Vettel',873444);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (13,'uncs14@uncc.edu', 'Gary Cahill',873444);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (14,'uncs15@uncc.edu', 'Eden Hazzard',873444);
+INSERT INTO `Staff` (`StaffID`,`StaffEmail`,`StaffName`,`StaffPassword`) VALUES (15,'uncs16@uncc.edu', 'Clint Eastwood',873444);
 
 /* Insertion into  resources */
 
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('1', 'SportsUNCC.PDF', '', 'NULL', '0','Sports', 'Fall');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('2', 'CultureUNCC.PDF', '', 'NULL', '2','Culture', 'Spring');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('3', 'Housing.PDF', '', 'NULL', '1', 'Housing','Summer1');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('4', 'TravelUNCC.PDF', '', 'NULL', '4', 'Travel','Summer2');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('5', 'CampusLifeUNCC.PDF', '', 'NULL', '2', 'CampusLife','Summer1');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('6', 'LibraryUNCC.PDF', '', 'NULL', '3', 'Library', 'Spring');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('7', 'AcademicsUNCC.PDF', '', 'NULL', '1', 'Academics','Summer2');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('8', 'SecurityUNCC.PDF', '', 'NULL', '5', 'Security', 'Fall');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('9', 'AdmissionsUNCC.PDF', '', 'NULL', '2', 'Admissions', 'Spring');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('10', 'AboutUNCC.PDF', '', 'NULL', '7', 'AboutUNCC','Summer1');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('11', 'VisitCampusUNCC.PDF', '', 'NULL', '6', 'VisitCampus','Fall');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('12', 'Parents_Family.PDF', '', 'NULL', '2', 'Parents_Family','Spring');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('13', 'Alumni_FriendsUNCC.PDF', '', 'NULL', '6', 'Alumni_Friends','Summer2');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('14', 'Faculty_StaffUNCC.PDF', '', 'NULL', '1', 'Faculty_Staff','Summer1');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('15', 'Community_EngageUNCC.PDF', '', 'NULL', '2', 'Community_Engagaement','Fall');
-INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`, `FAFSA`, `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('16', 'ResearchUNCC.PDF', '', 'NULL', '4', 'Research','Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('1', 'SportsUNCC.PDF', '', '0','Sports', 'Fall');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('2', 'CultureUNCC.PDF', '', '2','Culture', 'Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('3', 'Housing.PDF', '', '1', 'Housing','Summer1');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('4', 'TravelUNCC.PDF', '', '4', 'Travel','Summer2');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('5', 'CampusLifeUNCC.PDF', '', '2', 'CampusLife','Summer1');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('6', 'LibraryUNCC.PDF', '', '3', 'Library', 'Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('7', 'AcademicsUNCC.PDF', '', '1', 'Academics','Summer2');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('8', 'SecurityUNCC.PDF', '', '5', 'Security', 'Fall');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('9', 'AdmissionsUNCC.PDF', '', '2', 'Admissions', 'Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('10', 'AboutUNCC.PDF', '', '7', 'AboutUNCC','Summer1');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('11', 'VisitCampusUNCC.PDF', '', '6', 'VisitCampus','Fall');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('12', 'Parents_Family.PDF', '', '2', 'Parents_Family','Spring');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('13', 'Alumni_FriendsUNCC.PDF', '', '6', 'Alumni_Friends','Summer2');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('14', 'Faculty_StaffUNCC.PDF', '', '1', 'Faculty_Staff','Summer1');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('15', 'Community_EngageUNCC.PDF', '', '2', 'Community_Engagaement','Fall');
+INSERT INTO `resources` (`idResource`, `StudentLifeDoc`,`StudentLifeDocContents`,  `TimesDownloaded`, `Specialization`,`AcademicCalendar`) VALUES ('16', 'ResearchUNCC.PDF', '', '4', 'Research','Spring');
 
 
 /*I Insertion into clickson */
@@ -391,7 +409,7 @@ INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Agency Start Scholarship','M6'
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('A.K. Sutton Scholarship','M7');
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Bonnie Cone Scholarship','M8');
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Alumni Scholarships for Merit','M9');
-INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Grant Thornton Scholarship','M10');
+INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('John Scholarship','M10');
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Belk Scholarships','M11');
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Turing Scholarships','M12');
 INSERT INTO `offered`(`Name`, `MajorID`) VALUES ('Federal Grants','M13');
@@ -420,14 +438,22 @@ INSERT INTO `seeking`(`Degree`, `StartDate`, `Email`, `MajorID`) VALUES ('MS','2
 
 /* Insertion into graduatedegree */ 
 
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M9','Computer Science',290);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M10','Mathematics',290);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M11','Physics',290);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M12','Chemistry',260);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M13','Mechanical Engineering',290);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M14','Civil Engineering',300);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M15','Electrical and Computer Engineering',300);
-INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M16','Industrial Engineering',300);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M1','Computer Science',250);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M2','Mathematics',250);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M3','Physics',250);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M4','Chemistry',260);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M5','Mechanical Engineering',260);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M6','Civil Engineering',260);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M7','Electrical and Computer Engineering',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M8','Industrial Engineering',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M9','Accounting',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M10','Anthropology',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M11','Criminal Justice',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M12','Economics',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M13','English',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M14','History',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M15','Meteorology',270);
+INSERT INTO `graduatedegree`(`MajorID`, `GSpecialization`, `GREScore`) VALUES ('M16','Political Science',270);
 
 
 /* Insertion into Address */ 
@@ -447,5 +473,6 @@ INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`buildi
 INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('RajahChacko@uncc.edu', '1300 Church Lane', 'Pittsburgh', 'PA', '11300', '1300', '1300', 'North');
 INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('SujitNanda@uncc.edu', '1400 Rolling St', 'Raleigh', 'NC', '11400', '1400', '1400', 'North');
 INSERT INTO `address` (`email`, `streetName`, `city`, `state`, `zipcode`,`building`, `apartment`, `region`) VALUES ('SukritiRoy@uncc.edu', '1500 Cherry Blossoms', 'Charlotte', 'NC', '11500', '1500', '1500', 'Mideast');
+
 
 
