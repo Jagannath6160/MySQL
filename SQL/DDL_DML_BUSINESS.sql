@@ -855,7 +855,7 @@ UPDATE `seeking` SET `Degree` = 'phD', `MajorID` = 'M10' WHERE `seeking`.`Email`
 
 /* Allow staff to search based on Major */
 
-CREATE VIEW `Search by MajorName` AS
+
 SELECT A.email, A.FirstName, A.LastName, MajorName
 FROM
 	AspiringStudent A, Major M, Seeking S
@@ -867,7 +867,7 @@ WHERE
 
  /* Allow staff to search based on  Degree seeking */
 
-CREATE VIEW `Search by DEGREESEEKING1` AS
+
 SELECT  A.email, A.FirstName, A.LastName, MajorName
 FROM
 	AspiringStudent A, Major M, Seeking S
@@ -883,7 +883,7 @@ WHERE
 
 /* -- Allow staff to search based on  favorite extracurricular activities. */
 
-CREATE VIEW `Search Students by Extracurricular Activity name` AS
+
 SELECT A.email, A.FirstName, A.LastName, E.AcademicLetter, E.YearExperience
 FROM
     AspiringStudent A,  enjoys E, extracurricularactivities EC
@@ -899,13 +899,13 @@ WHERE
 
 /* Allow staff to view a student’s G.P.A and S.A.T Score  */
 
-CREATE VIEW `View Student's GPA and test scores` AS
+
 SELECT a.email, a.testscore, a.GPA FROM aspiringstudent a WHERE a.email="rvanga@gmail.com";
 
 
 /*  Allow staff to view all the student’s G.P.A and S.A.T Score in decreasing order of test score.  */
 
-CREATE VIEW `Display test scores in descending` AS
+
 SELECT a.email, a.testscore, a.GPA FROM aspiringstudent a ORDER BY a.testscore DESC;
 
 
@@ -914,13 +914,13 @@ SELECT a.email, a.testscore, a.GPA FROM aspiringstudent a ORDER BY a.testscore D
 
 /* Allow the student to locate all the resources available to him.  */
 
-CREATE VIEW `Resources available to Student` AS
+
 Select StudentLifeDoc From Resources;
 
 
 /* Allow the student to view resources based on specialization */
 
-CREATE VIEW `View Resources based on specialization` AS
+
 Select StudentLifeDoc, StudentLifeDocContents
 From Resources
 where Specialization like 'sports';
@@ -945,7 +945,7 @@ Select * from major m, GraduateDegree g where g.MajorID =m.MajorID and m.MinGPA=
 
 /*  Allow staff to search by Location / City */
 
-CREATE or REPLACE VIEW `Search by city1` AS
+
 SELECT  A.email, A.FirstName, A.LastName, MajorName, City
 FROM
 	AspiringStudent A, Address D, Major M, Seeking S
@@ -958,7 +958,7 @@ WHERE
 
 /* Allow staff to search by Geography or Region */
 
-CREATE or REPLACE VIEW `Search by Geography / Region` AS
+
 SELECT  A.email, A.FirstName, A.LastName, MajorName, Region
 FROM
 	AspiringStudent A, Address D, Major M, Seeking S
@@ -975,13 +975,13 @@ WHERE
 
 /* Allow staff to View reports to recruit and reach out to students based on the extracurricular activity name */
 
-CREATE or REPLACE VIEW `Search students by interest in ECA` AS
+
 SELECT e.email,a.firstname,a.lastname, ec.ExtraCurricularName from enjoys e, aspiringstudent a, extracurricularactivities ec where e.email = a.email and e.ExtraCurricularID =ec.ExtraCurricularID and ec.ExtraCurricularName = 'Swimming';
 
 
 /* Allow staff to View reports to recruit and reach out to students based on their Academics. */
 
-CREATE or REPLACE VIEW `Search students by TestScore and GPA` AS
+
 SELECT  email,LastName,FirstName
 from      aspiringstudent
            where   GPA > '3.50'
@@ -993,7 +993,7 @@ and        TestScore > 300;
 
 /* Allow staff to view the resources accessed by a student */
 
-CREATE or REPLACE VIEW `Search the resources accessed by a student` AS
+
 SELECT r.StudentLifeDoc, r.specialization, r.TimesDownloaded, r.AcademicCalendar 
 from clickson c ,resources r 
 where c.idresource = r.idresource 
@@ -1001,7 +1001,7 @@ and email = 'LakshmiVenkataSowmyaAndal@uncc.edu';
 
 /*Allow staff to view the most accessed resource. */
 
-CREATE or REPLACE VIEW `Most accessed resource` AS
+
 SELECT idresource,Specialization,TimesDownloaded
 from    resources
 where   TimesDownloaded = (select Max(TimesDownloaded)  from   resources);
