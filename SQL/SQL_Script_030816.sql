@@ -587,31 +587,16 @@ INSERT INTO `clickson`(`idResource`, `email`) VALUES (2,'JayShah@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (3,'EbrahimMughal@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (4,'KrantiChinnaokotla@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (5,'LakshmiVenkataSowmyaAndal@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (6,'JaiDave@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (7,'RajahChacko@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (8,'SukritiRoy@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (9,'SujitNanda@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (10,'DineashPanchananam@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (1,'KatherineRees@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (2,'ChloeHunter@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (3,'GrayCarolyn@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (4,'PetersAbigail@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (5,'MackenzieLeonard@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (6,'KatherineRees@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (7,'ChloeHunter@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (8,'GrayCarolyn@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (9,'PetersAbigail@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (10,'MackenzieLeonard@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (1,'JayShah@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (2,'EbrahimMughal@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (3,'KrantiChinnaokotla@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (4,'LakshmiVenkataSowmyaAndal@uncc.edu');
 INSERT INTO `clickson`(`idResource`, `email`) VALUES (5,'JaiDave@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (6,'RajahChacko@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (7,'SukritiRoy@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (8,'SujitNanda@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (9,'KatherineRees@uncc.edu');
-INSERT INTO `clickson`(`idResource`, `email`) VALUES (10,'ChloeHunter@uncc.edu');
 
 /* Insertion into offers */
 
