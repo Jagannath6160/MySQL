@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `UNIVERSITYDB`.`ClicksOn` (
     REFERENCES `UNIVERSITYDB`.`Resources` (`idResource`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  CONSTRAINT `1email`
+  CONSTRAINT `email`
     FOREIGN KEY (`email`)
     REFERENCES `UNIVERSITYDB`.`AspiringStudent` (`email`)
     ON DELETE CASCADE
